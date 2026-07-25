@@ -1,0 +1,97 @@
+package text
+
+import "testing"
+
+func TestNormalize(t *testing.T) {
+	var input = []rune("hellÒ    \t \n world")
+	var expectedOutput = "hello world"
+	Normalize(&input)
+
+	if string(input) != expectedOutput {
+		t.Fatalf("Expected: %v\nGOT: %v\n", expectedOutput, string(input))
+	}
+}
+
+func TestPorterStem(t *testing.T) {
+	var stem = func(input, expectedOutput string) {
+		var inputrunes = []rune(input)
+		PorterStem(&inputrunes)
+		if string(inputrunes) != expectedOutput {
+			t.Fatalf("Expected: %v\nGOT: %v\n", expectedOutput, string(inputrunes))
+		}
+	}
+
+	stem("op", "op")
+	stem("caresses", "caress")
+	stem("ponies", "poni")
+	stem("caress", "caress")
+	stem("cats", "cat")
+	stem("feed", "feed")
+	stem("agreed", "agre")
+	stem("bled", "bled")
+	stem("plastered", "plaster")
+	stem("motoring", "motor")
+	stem("sing", "sing")
+	stem("conflated", "conflat")
+	stem("hopping", "hop")
+	stem("tanned", "tan")
+	stem("hissing", "hiss")
+	stem("falling", "fall")
+	stem("failing", "fail")
+	stem("filing", "file")
+	stem("fizzed", "fizz")
+	stem("sized", "size")
+	stem("happy", "happi")
+	stem("relational", "relat")
+	stem("conditional", "condit")
+	stem("conditioned", "condit")
+	stem("rational", "ration")
+	stem("valenci", "valenc")
+	stem("digitizer", "digit")
+	stem("conformabli", "conform")
+	stem("radicalli", "radic")
+	stem("differentli", "differ")
+	stem("vileli", "vile")
+	stem("analogousli", "analog")
+	stem("vietnamization", "vietnam")
+	stem("predication", "predic")
+	stem("operator", "oper")
+	stem("feudalism", "feudal")
+	stem("decisiveness", "decis")
+	stem("hopefulness", "hope")
+	stem("callousness", "callous")
+	stem("formaliti", "formal")
+	stem("sensitiviti", "sensit")
+	stem("sensibiliti", "sensibl")
+	stem("triplicate", "triplic")
+	stem("formative", "form")
+	stem("formalize", "formal")
+	stem("electriciti", "electr")
+	stem("electrical", "electr")
+	stem("hopeful", "hope")
+	stem("goodness", "good")
+	stem("revival", "reviv")
+	stem("allowance", "allow")
+	stem("inference", "infer")
+	stem("airliner", "airlin")
+	stem("gyroscopic", "gyroscop")
+	stem("adjustable", "adjust")
+	stem("defensible", "defens")
+	stem("irritant", "irrit")
+	stem("replacement", "replac")
+	stem("adjustment", "adjust")
+	stem("dependent", "depend")
+	stem("adoption", "adopt")
+	stem("homologou", "homolog")
+	stem("communism", "commun")
+	stem("activate", "activ")
+	stem("angulariti", "angular")
+	stem("homologous", "homolog")
+	stem("effective", "effect")
+	stem("bowdlerize", "bowdler")
+	stem("probate", "probat")
+	stem("rate", "rate")
+	stem("cease", "ceas")
+	stem("controll", "control")
+	stem("roll", "roll")
+}

@@ -13,9 +13,10 @@ if "%1" == "build" (
 )
 
 if "%1" == "test" (
-	pushd code\index
-		go test -v
-	popd
+	go test .\code\parser
+	go test .\code\text
+	rem go test -v .\code\parser
+	rem go test -v .\code\text
 	exit /b
 )
 

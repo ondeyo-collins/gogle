@@ -1,25 +1,28 @@
-package index
+package text
 
-// lowercase all the letters
-// remove punctuations
-func porterStem(input *[]byte) {
-	var measure = func(input []byte) int {
+// this is an implementation of the porter stemmer algorithm
+// NOTE: make sure all the runes in target are Normalized (see the Normalize function) before calling porterStem
+func PorterStem(input *[]rune) {
+	if len(*input) < 1 {
+		return;
+	}
+	var measure = func(input []rune) int {
 		var m int
-		var currentByte byte
+		var currentRune rune
 		var previousVowel bool = false
 		for index := 0; index < len(input); index++ {
-			currentByte = input[index]
-			if currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u' {
-				// read the next byte, if it is a consonant, increament the measure
+			currentRune = input[index]
+			if currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u' {
+				// read the next rune, if it is a consonant, increament the measure
 				previousVowel = true
 				continue
 			}
-			if currentByte == 'y' {
+			if currentRune == 'y' {
 				if index == 0 {
-				 continue;
+					continue
 				}
-				currentByte = input[index-1]
-				if !(currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u') {
+				currentRune = input[index-1]
+				if !(currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u') {
 					previousVowel = true
 					continue
 				}
@@ -33,19 +36,19 @@ func porterStem(input *[]byte) {
 	}
 	// end of measure function variable
 
-	var containsVowel = func(input []byte) bool {
-		var currentByte byte
+	var containsVowel = func(input []rune) bool {
+		var currentRune rune
 		for index := 0; index < len(input); index++ {
-			currentByte = input[index]
-			if currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u' {
+			currentRune = input[index]
+			if currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u' {
 				return true
 			}
-			if currentByte == 'y' {
+			if currentRune == 'y' {
 				if index == 0 {
 					continue
 				}
-				currentByte = input[index-1]
-				if !(currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u') {
+				currentRune = input[index-1]
+				if !(currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u') {
 					return true
 				}
 			}
@@ -54,57 +57,64 @@ func porterStem(input *[]byte) {
 	}
 	// end of containsVowel function variable
 
-	var endsInCVC = func(input []byte) bool {
+	var endsInCVC = func(input []rune) bool {
 		// read from the end
 		var inputLen = len(input)
 		var index uint = uint(inputLen - 1)
-		var currentByte byte
+		var currentRune rune
 
 		/* check for the cvc condition */
-		// last byte
-		currentByte = (input)[index]
-		if currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u' {
+		// last rune
+		currentRune = (input)[index]
+		if currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u' {
 			//goto endOfStep1b
 			return false
 		} else {
-			if currentByte == 'y' { // y is considered a vowel if it is preceeded by a consonant
-				currentByte = (input)[index-1]
-				if !(currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u') {
+			if currentRune == 'y' { // y is considered a vowel if it is preceeded by a consonant
+				currentRune = (input)[index-1]
+				if !(currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u') {
 					/// goto endOfStep1b // the byte preceeding y is a consonant, therefore y is a vowel, breaking the cvc condition
 					return false
 				}
 			}
 		}
-
-		// second last byte
-		index--
-		currentByte = (input)[index]
-		if currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u' {
-			// goto thirdLastByte
+		if currentRune == 'w' || currentRune == 'x' || currentRune == 'y' { // the final consonant should not be w, x, or y
 			return false
-		} else if currentByte == 'y' {
-			currentByte = (input)[index-1]
-			if currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u' {
-				// goto endOfStep1b // the character preceeding y is a vowel, therefore y is a consonant, breaking the cvc condition
+		}
+
+		// second last rune
+		if index == 0 {
+			return false
+		}
+		index--
+		currentRune = (input)[index]
+		if currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u' {
+			goto thirdLastRune
+			// return false
+		} else if currentRune == 'y' {
+			currentRune = (input)[index-1]
+			if currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u' {
+				// the character preceeding y is a vowel, therefore y is a consonant, breaking the cvc condition
 				return false
 			} else {
-				// goto thirdLastByte
-				return false
+				goto thirdLastRune
+				// return false
 			}
 		}
 
-		// third last byte
+	thirdLastRune:
+		// third last rune
 		if index == 0 {
-			return false;
+			return false
 		}
 		index--
-		currentByte = (input)[index]
-		if currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u' {
+		currentRune = (input)[index]
+		if currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u' {
 			// goto endOfStep1b
 			return false
-		} else if currentByte == 'y' {
-			currentByte = (input)[index-1]
-			if !(currentByte == 'a' || currentByte == 'e' || currentByte == 'i' || currentByte == 'o' || currentByte == 'u') {
+		} else if currentRune == 'y' {
+			currentRune = (input)[index-1]
+			if !(currentRune == 'a' || currentRune == 'e' || currentRune == 'i' || currentRune == 'o' || currentRune == 'u') {
 				// goto endOfStep1b // y is preceeded by a consonant, that makes it a vowel, breaking the cvc condition
 				return false
 			}
@@ -130,6 +140,7 @@ func porterStem(input *[]byte) {
 	// step 1b
 	{
 		inputLen = len(*input)
+		var oneOrTwoSucceeded bool = false
 		if inputLen > 3 && string((*input)[(inputLen-3):inputLen]) == "eed" { // (m > 0) eed -> ee
 			if measure((*input)[0:(inputLen-3)]) > 0 {
 				*input = (*input)[:inputLen-1]
@@ -138,11 +149,17 @@ func porterStem(input *[]byte) {
 		} else if inputLen > 2 && string((*input)[(inputLen-2):inputLen]) == "ed" { // (*v*) ed ->
 			if containsVowel((*input)[0 : inputLen-2]) {
 				*input = (*input)[:inputLen-2]
+				oneOrTwoSucceeded = true
 			}
 		} else if inputLen > 3 && string((*input)[(inputLen-3):inputLen]) == "ing" { // (*v*) ing ->
 			if containsVowel((*input)[0 : inputLen-3]) {
 				*input = (*input)[:inputLen-3]
+				oneOrTwoSucceeded = true
 			}
+		}
+
+		if !oneOrTwoSucceeded {
+			goto endOfStep1b
 		}
 
 		inputLen = len(*input)
@@ -158,15 +175,14 @@ func porterStem(input *[]byte) {
 			if len(*input) < 2 {
 				goto endOfStep1b
 			}
-			var lastTwoBytes = string((*input)[(inputLen - 2):inputLen])
-			if !containsVowel([]byte(lastTwoBytes)) &&
-				lastTwoBytes[0] == lastTwoBytes[1] &&
-				!(lastTwoBytes == "ss" || lastTwoBytes == "ll" || lastTwoBytes == "zz") {
+			var lastTwoRunes = string((*input)[(inputLen - 2):inputLen])
+			if !containsVowel([]rune(lastTwoRunes)) &&
+				lastTwoRunes[0] == lastTwoRunes[1] &&
+				!(lastTwoRunes == "ss" || lastTwoRunes == "ll" || lastTwoRunes == "zz") {
 				*input = (*input)[:inputLen-1]
 			} else {
 				// (m = 1 and *o) -> E
 				//*o -	the stem ends cvc, where the second c is not W, X or Y (e.g. -WIL, -HOP)
-				// var currentByte byte
 				if endsInCVC(*input) && measure(*input) == 1 {
 					*input = append(*input, 'e')
 				}
@@ -186,12 +202,12 @@ func porterStem(input *[]byte) {
 	// step 2
 	{
 		inputLen = len(*input)
-		var penultimateByte byte
+		var penultimateRune rune
 		if inputLen < 2 {
 			goto endOfStep2
 		}
-		penultimateByte = (*input)[inputLen-2]
-		if penultimateByte == 'a' {
+		penultimateRune = (*input)[inputLen-2]
+		if penultimateRune == 'a' {
 			if inputLen > 7 && string((*input)[(inputLen-7):inputLen]) == "ational" && measure((*input)[0:inputLen-7]) > 0 { // (m > 0) ational -> ate
 				*input = (*input)[:inputLen-5]
 				*input = append(*input, 'e')
@@ -200,17 +216,17 @@ func porterStem(input *[]byte) {
 			}
 		}
 
-		if penultimateByte == 'c' {
+		if penultimateRune == 'c' {
 			if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "enci" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) ENCI->ENCE
 				(*input)[inputLen-1] = 'e'
 			} else if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "anci" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) ANCI->ANCE
 				(*input)[inputLen-1] = 'e'
-			} else if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "izer" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) izer -> ize
-				*input = (*input)[:inputLen-1]
 			}
+		} else if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "izer" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) izer -> ize
+			*input = (*input)[:inputLen-1]
 		}
 
-		if penultimateByte == 'l' {
+		if penultimateRune == 'l' {
 			if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "abli" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) abli -> able
 				(*input)[inputLen-1] = 'e'
 			} else if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "alli" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) alli -> al
@@ -224,7 +240,7 @@ func porterStem(input *[]byte) {
 			}
 		}
 
-		if penultimateByte == 'o' {
+		if penultimateRune == 'o' {
 			if inputLen > 7 && string((*input)[(inputLen-7):inputLen]) == "ization" && measure((*input)[0:inputLen-7]) > 0 { // (m>0) ization -> ize
 				*input = (*input)[:inputLen-5]
 				*input = append(*input, 'e')
@@ -237,7 +253,7 @@ func porterStem(input *[]byte) {
 			}
 		}
 
-		if penultimateByte == 's' {
+		if penultimateRune == 's' {
 			if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "alism" && measure((*input)[0:inputLen-5]) > 0 { // (m>0) alism -> al
 				*input = (*input)[:inputLen-3]
 			} else if inputLen > 7 && string((*input)[(inputLen-7):inputLen]) == "iveness" && measure((*input)[0:inputLen-7]) > 0 { // (m>0) iveness -> ive
@@ -249,7 +265,7 @@ func porterStem(input *[]byte) {
 			}
 		}
 
-		if penultimateByte == 't' {
+		if penultimateRune == 't' {
 			if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "aliti" && measure((*input)[0:inputLen-5]) > 0 { // (m>0) aliti -> al
 				*input = (*input)[:inputLen-3]
 			} else if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "iviti" && measure((*input)[0:inputLen-5]) > 0 { // (m>0) iviti -> ive
@@ -267,8 +283,8 @@ func porterStem(input *[]byte) {
 	// step 3
 	{
 		inputLen = len(*input)
-		var ultimateByte = (*input)[inputLen-1]
-		if ultimateByte == 'e' {
+		var ultimateRune = (*input)[inputLen-1]
+		if ultimateRune == 'e' {
 			if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "icate" && measure((*input)[0:inputLen-5]) > 0 { // (m>0) icate -> ic
 				*input = (*input)[:inputLen-3]
 			} else if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "ative" && measure((*input)[0:inputLen-5]) > 0 { // (m>0) ative ->
@@ -278,7 +294,7 @@ func porterStem(input *[]byte) {
 			}
 		} else if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "iciti" && measure((*input)[0:inputLen-5]) > 0 { // (m>0) iciti -> ic
 			*input = (*input)[:inputLen-3]
-		} else if ultimateByte == 'l' {
+		} else if ultimateRune == 'l' {
 			if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "ical" && measure((*input)[0:inputLen-4]) > 0 { // (m>0) ical -> ic
 				*input = (*input)[:inputLen-2]
 			} else if inputLen > 3 && string((*input)[(inputLen-3):inputLen]) == "ful" && measure((*input)[0:inputLen-3]) > 0 { // (m>0) ful ->
@@ -292,14 +308,14 @@ func porterStem(input *[]byte) {
 	// step 4
 	{
 		inputLen = len(*input)
-		var penultimateByte byte
+		var penultimateRune rune
 		if inputLen < 2 {
 			goto endOfStep4
 		}
-		penultimateByte = (*input)[inputLen-2]
+		penultimateRune = (*input)[inputLen-2]
 		if inputLen > 2 && string((*input)[(inputLen-2):inputLen]) == "al" && measure((*input)[0:inputLen-2]) > 1 { // (m>1) al ->
 			*input = (*input)[:inputLen-2]
-		} else if penultimateByte == 'c' {
+		} else if penultimateRune == 'c' {
 			if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "ance" && measure((*input)[0:inputLen-4]) > 1 { // (m>1) ance ->
 				*input = (*input)[:inputLen-4]
 			} else if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "ence" && measure((*input)[0:inputLen-4]) > 1 { // (m>1) ence ->
@@ -309,13 +325,13 @@ func porterStem(input *[]byte) {
 			*input = (*input)[:inputLen-2]
 		} else if inputLen > 2 && string((*input)[(inputLen-2):inputLen]) == "ic" && measure((*input)[0:inputLen-2]) > 1 { // (m>1) ic ->
 			*input = (*input)[:inputLen-2]
-		} else if penultimateByte == 'l' {
+		} else if penultimateRune == 'l' {
 			if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "able" && measure((*input)[0:inputLen-4]) > 1 { // (m>1) able ->
 				*input = (*input)[:inputLen-4]
 			} else if inputLen > 4 && string((*input)[(inputLen-4):inputLen]) == "ible" && measure((*input)[0:inputLen-4]) > 1 { // (m>1) ible ->
 				*input = (*input)[:inputLen-4]
 			}
-		} else if penultimateByte == 'n' {
+		} else if penultimateRune == 'n' {
 			if inputLen > 3 && string((*input)[(inputLen-3):inputLen]) == "ant" && measure((*input)[0:inputLen-3]) > 1 { // (m>1) ant ->
 				*input = (*input)[:inputLen-3]
 			} else if inputLen > 5 && string((*input)[(inputLen-5):inputLen]) == "ement" && measure((*input)[0:inputLen-5]) > 1 { // (m>1) ement ->
@@ -349,7 +365,7 @@ func porterStem(input *[]byte) {
 		} else {
 			// (m = 1 and not *o) e ->
 			//*o -	the stem ends cvc, where the second c is not W, X or Y (e.g. -WIL, -HOP)
-			if measure((*input)[0:inputLen-1]) == 1 && endsInCVC(*input) {
+			if inputLen > 1 && (*input)[inputLen-1] == 'e' && measure((*input)[0:inputLen-1]) == 1 && endsInCVC((*input)[:inputLen-1]) == false {
 				*input = (*input)[:inputLen-1]
 			}
 		}
@@ -358,16 +374,16 @@ func porterStem(input *[]byte) {
 	// steb 5b
 	{
 		inputLen = len(*input)
-		var lastTwoBytes string
+		var lastTwoRunes string
 		// (m > 1 and *d and *L) -> single letter
 		if measure(*input) <= 1 || inputLen < 2 {
 			goto endOfStep5b
 		}
-		lastTwoBytes = string((*input)[(inputLen - 2):inputLen])
+		lastTwoRunes = string((*input)[(inputLen - 2):inputLen])
 		// *d and *L - the input ends in double consonant "ll"
-		if lastTwoBytes == "ll" {
+		if lastTwoRunes == "ll" {
 			*input = (*input)[:inputLen-1]
 		}
-		endOfStep5b:
+	endOfStep5b:
 	}
 }

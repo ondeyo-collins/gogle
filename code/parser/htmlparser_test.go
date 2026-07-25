@@ -1,4 +1,4 @@
-package index
+package parser
 
 import "testing"
 import "strings"

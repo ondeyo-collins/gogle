@@ -10,10 +10,24 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"strings"
 )
 
 func main() {
+	if len(os.Args) < 2 {
+		println("[USAGE]: gogle <root folder>")
+		return
+	}
+	if folderStat, err := os.Stat(os.Args[1]); err != nil {
+		println(err.Error())
+		return
+	} else if !folderStat.IsDir() {
+		println("[ERROR] ", os.Args[1], " is not a folder")
+		return
+	}
+
 	var (
+		rootFolder    string = os.Args[1]
 		file          *os.File
 		index         = index.NewIndex()
 		nextEventFunc func(*parser.ParserEvent)
@@ -22,11 +36,16 @@ func main() {
 			Buffer: make([]rune, 256),
 			Error:  nil,
 		}
-		query string
-		scanner = bufio.NewScanner(os.Stdin)
+		query    string
+		scanner  = bufio.NewScanner(os.Stdin)
+		spinners = []string{"/", "\\"}
 	)
 
-	filepath.WalkDir("files", func(path string, d fs.DirEntry, err error) error {
+	var count = 0
+	print("Indexing: ", rootFolder, "  ")
+	filepath.WalkDir(rootFolder, func(path string, d fs.DirEntry, err error) error {
+		print("\b", spinners[count%2])
+		count++
 		if err != nil {
 			println("[ERROR]: ", err.Error())
 			return err
@@ -34,6 +53,11 @@ func main() {
 		if d.IsDir() {
 			return nil
 		}
+
+		if matches, _ := (filepath.Match("*html", filepath.Ext(path))); !matches {
+			return nil
+		}
+
 		file, err = os.Open(path)
 		if err != nil {
 			println("[ERROR]: ", err.Error())
@@ -59,25 +83,18 @@ func main() {
 		file.Close()
 		return nil
 	})
-	// index.Search("GL_PIXEL_UNPACK_BUFFER")
-	// index.Search("GL_PIXEL_PACK_BUFFER")
-	// index.Search("GL_PIXEL_PACK_BUFFER_BINDING")
-	// index.Search("GL_ELEMENT_ARRAY_BUFFER_BINDING")
-	// index.Search("hyperbolic")
-	// index.Search("arc")
-	// index.Search("imageloaD")
-	// index.Search("and")
-	// index.Search("COLLIN")
-
-	println("gogle; a small search engine")
-	println("type \"exit\" to exit the program")
-	print("> ")
+	print("\b", " ")
+	println("\ngogle; a small search engine")
+	println("type \".exit\" to exit the program")
+	println("[INFO]: the current Version of gogle can only search for a single term at a time")
+	println("[INFO]: gogle does not have any typo tolerance yet")
+	print("gogle> ")
 	for scanner.Scan() {
-		query = (scanner.Text())
-		if query == "exit" {
-			break;
+		query = (strings.TrimSpace(scanner.Text()))
+		if query == ".exit" {
+			break
 		}
-		index.Search(query);
+		index.Search(query)
 		print("> ")
 	}
 }

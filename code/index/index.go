@@ -67,12 +67,11 @@ func (index *index) Search(term string) {
 	// println(string(termRunes))
 	_, ok := index.dictionary[string(termRunes)]
 	if !ok {
-		println(term, "not in dictionary")
+		println("no results for ",term)
 		return
 	}
 
-	print(term, " in dictionary")
-	println(" number of postings: ", len(index.dictionary[string(termRunes)]))
+	println(len(index.dictionary[string(termRunes)]), " results for ",term, ": ");
 	var postingsCount = len(index.dictionary[string(termRunes)])
 	for count := 0; count < postingsCount; count++ { // looping through postings
 		var posting = index.dictionary[string(termRunes)][count]

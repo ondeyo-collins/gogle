@@ -3,7 +3,8 @@ package text
 import "testing"
 
 func TestNormalize(t *testing.T) {
-	var input = []rune("hellÒ    \t \n world")
+	// var input = []rune("hellÒ    \t \n world")
+	var input=[]rune("defined(__GNUC__)")
 	var expectedOutput = "hello world"
 	Normalize(&input)
 

@@ -22,7 +22,7 @@ if "%1" == "test" (
 
 if "%1" == "run" (
 	pushd build
-		gogle.exe
+		gogle.exe docs.gl
 	popd
 	exit /b
 )

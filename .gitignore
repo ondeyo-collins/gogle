@@ -1,2 +1,4 @@
 *.swp
 build/files
+build/docs.gl
+build/hello.txt

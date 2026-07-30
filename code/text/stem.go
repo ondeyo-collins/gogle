@@ -1,7 +1,7 @@
 package text
 
 // this is an implementation of the porter stemmer algorithm
-// NOTE: make sure all the runes in target are Normalized (see the Normalize function) before calling porterStem
+// NOTE: make sure all the runes in target are Normalized (see the Normalize function - normalize.go) before calling porterStem
 func PorterStem(input *[]rune) {
 	if len(*input) < 1 {
 		return;

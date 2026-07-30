@@ -67,7 +67,7 @@ var ignorePunctuation = map[rune]bool{
 	'+': true, '-': true, '*': true, '/': true, '\\': true, '=': true, '<': true, '>': true,
 
 	// financial and commercial
-	'$': true, '%': true, '@': true, '&': true, '_': false,
+	'$': true, '%': true, '@': true, '&': true, '_': true,
 
 	// connectors and miscellaneous
 	'#': true, '^': true, '~': true, '|': true,

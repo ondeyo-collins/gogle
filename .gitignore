@@ -1,5 +1,6 @@
 *.swp
 build/
+test/
 scripts/
 make.bat
 rename_files.bat

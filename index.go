@@ -59,27 +59,10 @@ func (index *index) Add(documentName string, terms []string) {
 	}
 }
 
-/*
-	tokenize the query
-	extract the documents that contain the first term, then filter those documents to obtain the ones containing the second term as well
-*/
-// func (index *index) Search(query string) {
-// 	var terms = strings.Split(query, " ");
-// 	// first term 
-// 	var postings = index.dictionary[]
-// }
-/*
-	maybe we should have a wrapper that converts the user's query into a searchable format (normalized, stemmed terms)
-	eg
-	Search(query string) 	
-		-> get the first term, use it to find the postings in the index, 
-		-> then get the second term, and use it on the already retrieved postings
-*/
-
 func (index *index) Search(term string) {
 	var termRunes = []rune(term)
-	text.Normalize(&termRunes)
-	text.PorterStem(&termRunes)
+	Normalize(&termRunes)
+	PorterStem(&termRunes)
 	_, ok := index.dictionary[string(termRunes)]
 	if !ok {
 		println("zero results for ", term)

@@ -1,4 +1,4 @@
-package text
+package gogle
 
 // this is an implementation of the porter stemmer algorithm
 // NOTE: make sure all the runes in target are Normalized (see the Normalize function - normalize.go) before calling porterStem

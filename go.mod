@@ -1,4 +1,4 @@
-module github.com/collins994/gogle
+module github.com/ondeyo-collins/gogle
 
 go 1.25.0
 

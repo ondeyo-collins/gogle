@@ -3,7 +3,7 @@ type eventType int
 	errors I'm worried About:
 		a < in a character string
 */
-package parser
+package gogle
 
 import (
 	"bufio"

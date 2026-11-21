@@ -1,4 +1,4 @@
-package parser
+package gogle
 
 import "testing"
 import "strings"

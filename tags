@@ -10,8 +10,13 @@
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
 !_TAG_FIELD_DESCRIPTION!Go	package	/the real package specified by the package name/
 !_TAG_FIELD_DESCRIPTION!Go	packageName	/the name for referring the package/
+!_TAG_FIELD_DESCRIPTION!Python	nameref	/the original name for the tag/
+!_TAG_FIELD_DESCRIPTION!XML	uri	/uri associated with name prefix/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_KIND_DESCRIPTION!CSS	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!CSS	i,id	/identities/
+!_TAG_KIND_DESCRIPTION!CSS	s,selector	/selectors/
 !_TAG_KIND_DESCRIPTION!DTD	E,entity	/entities/
 !_TAG_KIND_DESCRIPTION!DTD	a,attribute	/attributes/
 !_TAG_KIND_DESCRIPTION!DTD	e,element	/elements/
@@ -32,6 +37,25 @@
 !_TAG_KIND_DESCRIPTION!Go	s,struct	/structs/
 !_TAG_KIND_DESCRIPTION!Go	t,type	/types/
 !_TAG_KIND_DESCRIPTION!Go	v,var	/variables/
+!_TAG_KIND_DESCRIPTION!HTML	C,stylesheet	/stylesheets/
+!_TAG_KIND_DESCRIPTION!HTML	I,id	/identifiers/
+!_TAG_KIND_DESCRIPTION!HTML	J,script	/scripts/
+!_TAG_KIND_DESCRIPTION!HTML	a,anchor	/named anchors/
+!_TAG_KIND_DESCRIPTION!HTML	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!HTML	h,heading1	/H1 headings/
+!_TAG_KIND_DESCRIPTION!HTML	i,heading2	/H2 headings/
+!_TAG_KIND_DESCRIPTION!HTML	j,heading3	/H3 headings/
+!_TAG_KIND_DESCRIPTION!HTML	t,title	/titles/
+!_TAG_KIND_DESCRIPTION!JavaScript	C,constant	/constants/
+!_TAG_KIND_DESCRIPTION!JavaScript	G,getter	/getters/
+!_TAG_KIND_DESCRIPTION!JavaScript	M,field	/fields/
+!_TAG_KIND_DESCRIPTION!JavaScript	S,setter	/setters/
+!_TAG_KIND_DESCRIPTION!JavaScript	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!JavaScript	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!JavaScript	g,generator	/generators/
+!_TAG_KIND_DESCRIPTION!JavaScript	m,method	/methods/
+!_TAG_KIND_DESCRIPTION!JavaScript	p,property	/properties/
+!_TAG_KIND_DESCRIPTION!JavaScript	v,variable	/global variables/
 !_TAG_KIND_DESCRIPTION!Markdown	S,subsection	/level 2 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	T,l4subsection	/level 4 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	c,chapter	/chapters/
@@ -40,16 +64,38 @@
 !_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	u,l5subsection	/level 5 sections/
+!_TAG_KIND_DESCRIPTION!Python	I,namespace	/name referring a module defined in other file/
+!_TAG_KIND_DESCRIPTION!Python	Y,unknown	/name referring a class\/variable\/function\/module defined in other module/
+!_TAG_KIND_DESCRIPTION!Python	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!Python	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!Python	i,module	/modules/
+!_TAG_KIND_DESCRIPTION!Python	m,member	/class members/
+!_TAG_KIND_DESCRIPTION!Python	v,variable	/variables/
+!_TAG_KIND_DESCRIPTION!Sh	a,alias	/aliases/
+!_TAG_KIND_DESCRIPTION!Sh	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!Sh	h,heredoc	/label for here document/
+!_TAG_KIND_DESCRIPTION!Sh	s,script	/script files/
+!_TAG_KIND_DESCRIPTION!XML	i,id	/id attributes/
+!_TAG_KIND_DESCRIPTION!XML	n,nsprefix	/namespace prefixes/
+!_TAG_KIND_DESCRIPTION!XML	r,root	/root elements/
+!_TAG_KIND_DESCRIPTION!Yaml	a,anchor	/anchors/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
+!_TAG_PARSER_VERSION!CSS	0.0	/current.age/
 !_TAG_PARSER_VERSION!DTD	0.0	/current.age/
 !_TAG_PARSER_VERSION!DosBatch	0.0	/current.age/
 !_TAG_PARSER_VERSION!Go	0.0	/current.age/
+!_TAG_PARSER_VERSION!HTML	0.0	/current.age/
+!_TAG_PARSER_VERSION!JavaScript	1.1	/current.age/
 !_TAG_PARSER_VERSION!Markdown	1.1	/current.age/
+!_TAG_PARSER_VERSION!Python	0.0	/current.age/
+!_TAG_PARSER_VERSION!Sh	0.0	/current.age/
+!_TAG_PARSER_VERSION!XML	0.0	/current.age/
+!_TAG_PARSER_VERSION!Yaml	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	C:/Users/Collins/playground/gogle/	//
+!_TAG_PROC_CWD	C:/Users/Collins/programming/gogle/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
@@ -60,43 +106,1142 @@
 !_TAG_ROLE_DESCRIPTION!DTD!parameterEntity	partOfAttDef	/part of attribute definition/
 !_TAG_ROLE_DESCRIPTION!Go!package	imported	/imported package/
 !_TAG_ROLE_DESCRIPTION!Go!unknown	receiverType	/receiver type/
-Index	./code/index/index.go	/^func Index(file *os.File) {$/;"	f	package:index
-Type	./code/index/htmlparser.go	/^	Type        eventType$/;"	m	struct:index.parserEvent	typeref:typename:eventType
-baseRune	./code/index/htmlparser.go	/^var baseRune = map[rune]byte{$/;"	v	package:index
-buf	./code/index/htmlparser.go	/^	buf   *bufio.Reader$/;"	m	struct:index.fileReader	typeref:typename:*bufio.Reader
-cache	./code/index/htmlparser.go	/^	cache byte$/;"	m	struct:index.fileReader	typeref:typename:byte
-consumeFirstCharacter	./code/index/htmlparser.go	/^	consumeFirstCharacter     = true$/;"	c	package:index
-dontConsumeFirstCharacter	./code/index/htmlparser.go	/^	dontConsumeFirstCharacter = false$/;"	c	package:index
-dontSkipWhiteSpace	./code/index/htmlparser.go	/^	dontSkipWhiteSpace        = false$/;"	c	package:index
-eventBuffer	./code/index/htmlparser.go	/^	eventBuffer []byte$/;"	m	struct:index.parserEvent	typeref:typename:[]byte
-eventError	./code/index/htmlparser.go	/^	eventError  error$/;"	m	struct:index.parserEvent	typeref:typename:error
-eventErrorInvalidEndOfFile	./code/index/htmlparser.go	/^	eventErrorInvalidEndOfFile  = errors.New("Invalid end of file")$/;"	v	package:index
-eventErrorInvalidNewLine	./code/index/htmlparser.go	/^	eventErrorInvalidNewLine    = errors.New("Invalid new line")$/;"	v	package:index
-eventErrorInvalidTag	./code/index/htmlparser.go	/^	eventErrorInvalidTag        = errors.New("Invalid tag")$/;"	v	package:index
-eventErrorInvalidWhiteSpace	./code/index/htmlparser.go	/^	eventErrorInvalidWhiteSpace = errors.New("Invalid whitespace")$/;"	v	package:index
-eventType	./code/index/htmlparser.go	/^type eventType int$/;"	t	package:index	typeref:typename:int
-eventTypeAttributeKey	./code/index/htmlparser.go	/^	eventTypeAttributeKey                    \/\/ triggered right after the h in <a href="example.c/;"	c	package:index
-eventTypeAttributeValue	./code/index/htmlparser.go	/^	eventTypeAttributeValue                  \/\/ triggered right after the = in <a href="example.c/;"	c	package:index
-eventTypeClosingTag	./code/index/htmlparser.go	/^	eventTypeClosingTag                      \/\/ triggered right after the \/ in <\/html> is read /;"	c	package:index
-eventTypeComment	./code/index/htmlparser.go	/^	eventTypeComment                         \/\/$/;"	c	package:index
-eventTypeEndDocument	./code/index/htmlparser.go	/^	eventTypeEndDocument                     \/\/ triggered right after the > symbol of <\/html> is/;"	c	package:index
-eventTypeOpeningTag	./code/index/htmlparser.go	/^	eventTypeOpeningTag                      \/\/ triggered right after the h in <html> is read (an/;"	c	package:index
-eventTypeTextNode	./code/index/htmlparser.go	/^	eventTypeTextNode       eventType = iota \/\/ "my", "name", "is", "collins" - an eventTextNode /;"	c	package:index	typeref:type:eventType
-eventTypeUnknown	./code/index/htmlparser.go	/^	eventTypeUnknown                         \/\/ used to signal that an event.type is not set$/;"	c	package:index
-fileReader	./code/index/htmlparser.go	/^type fileReader struct {$/;"	s	package:index
-ignorePunctuation	./code/index/htmlparser.go	/^var ignorePunctuation = map[byte]bool{$/;"	v	package:index
-index	./code/index/htmlparser.go	/^package index$/;"	p
+!_TAG_ROLE_DESCRIPTION!HTML!class	attribute	/assigned as attributes/
+!_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
+!_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
+!_TAG_ROLE_DESCRIPTION!JavaScript!function	foreigndecl	/declared in foreign languages/
+!_TAG_ROLE_DESCRIPTION!Python!module	imported	/imported modules/
+!_TAG_ROLE_DESCRIPTION!Python!module	indirectlyImported	/module imported in alternative name/
+!_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
+!_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
+!_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
+!_TAG_ROLE_DESCRIPTION!Sh!heredoc	endmarker	/end marker/
+!_TAG_ROLE_DESCRIPTION!Sh!script	loaded	/loaded/
+!_TAG_ROLE_DESCRIPTION!Yaml!anchor	alias	/alias/
+#Copyright	./build/docs.gl/html/copy/style_dark.css	/^#Copyright {$/;"	i
+#Copyright	./build/docs.gl/html/copy/style_light.css	/^#Copyright {$/;"	i
+#Copyright	./build/docs.gl/html/style.css	/^#Copyright {$/;"	i
+#Copyright h2	./build/docs.gl/html/style.css	/^#Copyright h2 {$/;"	s
+#Copyright p	./build/docs.gl/html/style.css	/^#Copyright p {$/;"	s
+#command_categories	./build/docs.gl/html/style.css	/^#command_categories, #command_categories a {$/;"	i
+#command_categories a	./build/docs.gl/html/style.css	/^#command_categories, #command_categories a {$/;"	s
+#command_title	./build/docs.gl/html/style.css	/^#command_title {$/;"	i
+#command_versions	./build/docs.gl/html/style.css	/^#command_versions {$/;"	i
+#commandlist	./build/docs.gl/html/copy/media.css	/^	#commandlist {$/;"	i
+#everything	./build/docs.gl/html/style.css	/^#everything {$/;"	i
+#footer	./build/docs.gl/html/copy/style_dark.css	/^#footer {$/;"	i
+#footer	./build/docs.gl/html/copy/style_light.css	/^#footer {$/;"	i
+#footer	./build/docs.gl/html/style.css	/^#footer {$/;"	i
+#front_page	./build/docs.gl/html/style.css	/^#front_page {$/;"	i
+#frontsearch	./build/docs.gl/html/copy/media.css	/^	#frontsearch {$/;"	i
+#frontsearch	./build/docs.gl/html/copy/style_dark.css	/^#frontsearch, #search {$/;"	i
+#frontsearch	./build/docs.gl/html/copy/style_light.css	/^#frontsearch, #search {$/;"	i
+#frontsearch	./build/docs.gl/html/style.css	/^#frontsearch, #search {$/;"	i
+#frontsearch:focus	./build/docs.gl/html/copy/style_dark.css	/^#frontsearch:focus, #search:focus {$/;"	i
+#frontsearch:focus	./build/docs.gl/html/copy/style_light.css	/^#frontsearch:focus, #search:focus {$/;"	i
+#frontsearch_button	./build/docs.gl/html/style.css	/^#frontsearch_button {$/;"	i
+#hide_deprecated	./build/docs.gl/html/style.css	/^#hide_deprecated {$/;"	i
+#hide_label	./build/docs.gl/html/style.css	/^#hide_label {$/;"	i
+#improvepage	./build/docs.gl/html/copy/style_dark.css	/^#improvepage {$/;"	i
+#improvepage	./build/docs.gl/html/copy/style_light.css	/^#improvepage {$/;"	i
+#improvepage	./build/docs.gl/html/style.css	/^#improvepage {$/;"	i
+#khronos	./build/docs.gl/html/style.css	/^#khronos {$/;"	i
+#logo	./build/docs.gl/html/copy/style_light.css	/^#logo {$/;"	i
+#outer_disqus_thread	./build/docs.gl/html/copy/style_dark.css	/^#outer_disqus_thread {$/;"	i
+#outer_disqus_thread	./build/docs.gl/html/copy/style_light.css	/^#outer_disqus_thread {$/;"	i
+#outer_disqus_thread	./build/docs.gl/html/style.css	/^#outer_disqus_thread {$/;"	i
+#search	./build/docs.gl/html/copy/style_dark.css	/^#frontsearch, #search {$/;"	i
+#search	./build/docs.gl/html/copy/style_light.css	/^#frontsearch, #search {$/;"	i
+#search	./build/docs.gl/html/style.css	/^#frontsearch, #search {$/;"	i
+#search	./build/docs.gl/html/style.css	/^#search {$/;"	i
+#search:focus	./build/docs.gl/html/copy/style_dark.css	/^#frontsearch:focus, #search:focus {$/;"	i
+#search:focus	./build/docs.gl/html/copy/style_light.css	/^#frontsearch:focus, #search:focus {$/;"	i
+#search_button	./build/docs.gl/html/style.css	/^#search_button {$/;"	i
+#styles	./build/docs.gl/html/style.css	/^#styles {$/;"	i
+#styles a	./build/docs.gl/html/style.css	/^#styles a {$/;"	s
+#toc	./build/docs.gl/html/style.css	/^#toc {$/;"	i
+#versions table	./build/docs.gl/html/style.css	/^#versions table {$/;"	s
+#versions_container	./build/docs.gl/html/style.css	/^#versions_container {$/;"	i
+#versions_dropdown-button > span.ui-selectmenu-text	./build/docs.gl/html/style.css	/^#versions_dropdown-button > span.ui-selectmenu-text {$/;"	c
+.center	./build/docs.gl/html/style.css	/^.center {$/;"	c
+.center-container	./build/docs.gl/html/copy/media.css	/^	.center-container {$/;"	c
+.ckeyword	./build/docs.gl/html/copy/style_dark.css	/^.ckeyword {$/;"	c
+.ckeyword	./build/docs.gl/html/copy/style_light.css	/^.ckeyword {$/;"	c
+.ckeyword	./build/docs.gl/html/style.css	/^.ckeyword {$/;"	c
+.codecomment	./build/docs.gl/html/copy/style_dark.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment	./build/docs.gl/html/copy/style_light.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment	./build/docs.gl/html/style.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .ckeyword	./build/docs.gl/html/copy/style_dark.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .ckeyword	./build/docs.gl/html/copy/style_light.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .ckeyword	./build/docs.gl/html/style.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .codestring	./build/docs.gl/html/copy/style_dark.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .codestring	./build/docs.gl/html/copy/style_light.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .codestring	./build/docs.gl/html/style.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .constant	./build/docs.gl/html/copy/style_dark.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .constant	./build/docs.gl/html/copy/style_light.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codecomment .constant	./build/docs.gl/html/style.css	/^.codecomment, .codecomment .ckeyword, .codecomment .codestring, .codecomment .constant {$/;"	c
+.codestring	./build/docs.gl/html/copy/style_dark.css	/^.codestring {$/;"	c
+.codestring	./build/docs.gl/html/copy/style_light.css	/^.codestring {$/;"	c
+.commandcolumn	./build/docs.gl/html/copy/media.css	/^	.commandcolumn {$/;"	c
+.constant	./build/docs.gl/html/copy/style_dark.css	/^.constant {$/;"	c
+.constant	./build/docs.gl/html/copy/style_light.css	/^.constant {$/;"	c
+.current	./build/docs.gl/html/style.css	/^.current {$/;"	c
+.disabled	./build/docs.gl/html/copy/style_dark.css	/^.disabled, .disabled a, a.disabled {$/;"	c
+.disabled	./build/docs.gl/html/copy/style_light.css	/^.disabled, .disabled a, a.disabled {$/;"	c
+.disabled	./build/docs.gl/html/style.css	/^.disabled, .disabled a {$/;"	c
+.disabled a	./build/docs.gl/html/copy/style_dark.css	/^.disabled, .disabled a, a.disabled {$/;"	s
+.disabled a	./build/docs.gl/html/copy/style_light.css	/^.disabled, .disabled a, a.disabled {$/;"	s
+.disabled a	./build/docs.gl/html/style.css	/^.disabled, .disabled a {$/;"	s
+.example .programlisting	./build/docs.gl/html/copy/style_dark.css	/^.example .programlisting {$/;"	c
+.example .programlisting	./build/docs.gl/html/copy/style_light.css	/^.example .programlisting {$/;"	c
+.example .programlisting	./build/docs.gl/html/style.css	/^.example .programlisting {$/;"	c
+.function	./build/docs.gl/html/copy/style_dark.css	/^.function {$/;"	c
+.function	./build/docs.gl/html/copy/style_light.css	/^.function {$/;"	c
+.function	./build/docs.gl/html/style.css	/^.function {$/;"	c
+.header-bg	./build/docs.gl/html/copy/style_dark.css	/^.logo-bg, .header-bg {$/;"	c
+.header-bg	./build/docs.gl/html/copy/style_light.css	/^.header-bg {$/;"	c
+.header-bg	./build/docs.gl/html/style.css	/^.header-bg {$/;"	c
+.header-container	./build/docs.gl/html/style.css	/^.header-container {$/;"	c
+.header-inner	./build/docs.gl/html/style.css	/^.header-inner {$/;"	c
+.header-logo	./build/docs.gl/html/copy/style_dark.css	/^.logo, .header-logo {$/;"	c
+.header-logo	./build/docs.gl/html/copy/style_light.css	/^.logo, .header-logo {$/;"	c
+.header-logo	./build/docs.gl/html/style.css	/^.header-logo {$/;"	c
+.hidden	./build/docs.gl/html/style.css	/^.hidden {$/;"	c
+.indexcommand	./build/docs.gl/html/copy/media.css	/^	.indexcommand {$/;"	c
+.indexcommand	./build/docs.gl/html/copy/style_dark.css	/^.indexcommand {$/;"	c
+.indexcommand	./build/docs.gl/html/copy/style_light.css	/^.indexcommand {$/;"	c
+.informaltable table	./build/docs.gl/html/style.css	/^.informaltable table,$/;"	s
+.informaltable td	./build/docs.gl/html/style.css	/^.informaltable td {$/;"	s
+.informaltable th	./build/docs.gl/html/style.css	/^.informaltable th,$/;"	s
+.itemizedlist ul	./build/docs.gl/html/style.css	/^.itemizedlist ul {$/;"	s
+.logo	./build/docs.gl/html/copy/style_dark.css	/^.logo, .header-logo {$/;"	c
+.logo	./build/docs.gl/html/copy/style_light.css	/^.logo, .header-logo {$/;"	c
+.logo-bg	./build/docs.gl/html/copy/style_dark.css	/^.logo-bg, .header-bg {$/;"	c
+.logo-bg	./build/docs.gl/html/copy/style_light.css	/^.logo-bg {$/;"	c
+.logo-desc	./build/docs.gl/html/copy/style_dark.css	/^.logo-desc {$/;"	c
+.logo-desc	./build/docs.gl/html/copy/style_light.css	/^.logo-desc {$/;"	c
+.programlisting	./build/docs.gl/html/style.css	/^.programlisting, code {$/;"	c
+.refnamediv h2	./build/docs.gl/html/style.css	/^.refnamediv h2 {$/;"	s
+.result-headers	./build/docs.gl/html/copy/media.css	/^	.result-headers {$/;"	c
+.result-headers span	./build/docs.gl/html/copy/style_dark.css	/^.result-headers span {$/;"	s
+.result-headers span	./build/docs.gl/html/copy/style_light.css	/^.result-headers span {$/;"	s
+.search-div	./build/docs.gl/html/style.css	/^.search-div {$/;"	c
+.slversioncolumn	./build/docs.gl/html/copy/media.css	/^	.slversioncolumn {$/;"	c
+.thicken	./build/docs.gl/html/copy/style_light.css	/^.thicken {$/;"	c
+.thicken	./build/docs.gl/html/style.css	/^.thicken {$/;"	c
+.toggle-container	./build/docs.gl/html/style.css	/^.toggle-container {$/;"	c
+.ui-accordion .ui-accordion-content	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-accordion .ui-accordion-content {$/;"	c
+.ui-accordion .ui-accordion-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-accordion .ui-accordion-header {$/;"	c
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-accordion .ui-accordion-header .ui-accordion-header-icon {$/;"	c
+.ui-accordion .ui-accordion-icons	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-accordion .ui-accordion-icons {$/;"	c
+.ui-accordion .ui-accordion-icons .ui-accordion-icons	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-accordion .ui-accordion-icons .ui-accordion-icons {$/;"	c
+.ui-autocomplete	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-autocomplete {$/;"	c
+.ui-autocomplete	./build/docs.gl/html/style.css	/^.ui-autocomplete {$/;"	c
+.ui-autocomplete .ui-state-focus	./build/docs.gl/html/copy/style_dark.css	/^.ui-autocomplete .ui-state-focus, .ui-state-default {$/;"	c
+.ui-autocomplete .ui-state-focus	./build/docs.gl/html/copy/style_light.css	/^.ui-autocomplete .ui-state-focus, .ui-state-default {$/;"	c
+.ui-autocomplete .ui-state-focus	./build/docs.gl/html/style.css	/^.ui-autocomplete .ui-state-focus {$/;"	c
+.ui-button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button {$/;"	c
+.ui-button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button,$/;"	c
+.ui-button .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button .ui-button-text {$/;"	c
+.ui-button-icon-only	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icon-only {$/;"	c
+.ui-button-icon-only .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icon-only .ui-button-text,$/;"	c
+.ui-button-icon-only .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icon-only .ui-icon {$/;"	c
+.ui-button-icon-only .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icon-only .ui-icon,$/;"	c
+.ui-button-icons-only	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icons-only {$/;"	c
+.ui-button-icons-only .ui-button-icon-primary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icons-only .ui-button-icon-primary {$/;"	c
+.ui-button-icons-only .ui-button-icon-secondary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icons-only .ui-button-icon-secondary {$/;"	c
+.ui-button-icons-only .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icons-only .ui-button-text {$/;"	c
+.ui-button-icons-only .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-icons-only .ui-icon {$/;"	c
+.ui-button-text-icon-primary .ui-button-icon-primary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icon-primary .ui-button-icon-primary,$/;"	c
+.ui-button-text-icon-primary .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icon-primary .ui-button-text,$/;"	c
+.ui-button-text-icon-primary .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icon-primary .ui-icon,$/;"	c
+.ui-button-text-icon-secondary .ui-button-icon-secondary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icon-secondary .ui-button-icon-secondary,$/;"	c
+.ui-button-text-icon-secondary .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icon-secondary .ui-button-text,$/;"	c
+.ui-button-text-icon-secondary .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icon-secondary .ui-icon,$/;"	c
+.ui-button-text-icons .ui-button-icon-primary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icons .ui-button-icon-primary,$/;"	c
+.ui-button-text-icons .ui-button-icon-secondary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icons .ui-button-icon-secondary,$/;"	c
+.ui-button-text-icons .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icons .ui-button-text {$/;"	c
+.ui-button-text-icons .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-icons .ui-icon,$/;"	c
+.ui-button-text-only .ui-button-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button-text-only .ui-button-text {$/;"	c
+.ui-button:active	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button:active {$/;"	c
+.ui-button:hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button:hover,$/;"	c
+.ui-button:link	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button:link,$/;"	c
+.ui-button:visited	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-button:visited,$/;"	c
+.ui-buttonset	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-buttonset {$/;"	c
+.ui-buttonset .ui-button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-buttonset .ui-button {$/;"	c
+.ui-corner-all	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-all,$/;"	c
+.ui-corner-bl	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-bl {$/;"	c
+.ui-corner-bottom	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-bottom,$/;"	c
+.ui-corner-br	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-br {$/;"	c
+.ui-corner-left	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-left,$/;"	c
+.ui-corner-right	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-right,$/;"	c
+.ui-corner-tl	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-tl {$/;"	c
+.ui-corner-top	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-top,$/;"	c
+.ui-corner-tr	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-corner-tr {$/;"	c
+.ui-datepicker	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker {$/;"	c
+.ui-datepicker .ui-datepicker-buttonpane	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-buttonpane {$/;"	c
+.ui-datepicker .ui-datepicker-buttonpane button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-buttonpane button {$/;"	s
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {$/;"	c
+.ui-datepicker .ui-datepicker-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-header {$/;"	c
+.ui-datepicker .ui-datepicker-next	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-next {$/;"	c
+.ui-datepicker .ui-datepicker-next span	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-next span {$/;"	s
+.ui-datepicker .ui-datepicker-next-hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-next-hover {$/;"	c
+.ui-datepicker .ui-datepicker-prev	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-prev {$/;"	c
+.ui-datepicker .ui-datepicker-prev	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-prev,$/;"	c
+.ui-datepicker .ui-datepicker-prev span	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-prev span,$/;"	s
+.ui-datepicker .ui-datepicker-prev-hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-prev-hover {$/;"	c
+.ui-datepicker .ui-datepicker-prev-hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-prev-hover,$/;"	c
+.ui-datepicker .ui-datepicker-title	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-title {$/;"	c
+.ui-datepicker .ui-datepicker-title select	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker .ui-datepicker-title select {$/;"	s
+.ui-datepicker select.ui-datepicker-month	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker select.ui-datepicker-month,$/;"	c
+.ui-datepicker select.ui-datepicker-year	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker select.ui-datepicker-year {$/;"	c
+.ui-datepicker table	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker table {$/;"	s
+.ui-datepicker td	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker td {$/;"	s
+.ui-datepicker td a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker td a {$/;"	s
+.ui-datepicker td span	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker td span,$/;"	s
+.ui-datepicker th	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker th {$/;"	s
+.ui-datepicker-multi .ui-datepicker-buttonpane	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi .ui-datepicker-buttonpane {$/;"	c
+.ui-datepicker-multi .ui-datepicker-group	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi .ui-datepicker-group {$/;"	c
+.ui-datepicker-multi .ui-datepicker-group table	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi .ui-datepicker-group table {$/;"	s
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,$/;"	c
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {$/;"	c
+.ui-datepicker-multi-2 .ui-datepicker-group	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi-2 .ui-datepicker-group {$/;"	c
+.ui-datepicker-multi-3 .ui-datepicker-group	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi-3 .ui-datepicker-group {$/;"	c
+.ui-datepicker-multi-4 .ui-datepicker-group	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-multi-4 .ui-datepicker-group {$/;"	c
+.ui-datepicker-row-break	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-row-break {$/;"	c
+.ui-datepicker-rtl	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-buttonpane	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-buttonpane {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-buttonpane button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-buttonpane button {$/;"	s
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,$/;"	c
+.ui-datepicker-rtl .ui-datepicker-group	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-group {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,$/;"	c
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-next	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-next {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-next:hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-next:hover {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-prev	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-prev {$/;"	c
+.ui-datepicker-rtl .ui-datepicker-prev:hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker-rtl .ui-datepicker-prev:hover {$/;"	c
+.ui-datepicker.ui-datepicker-multi	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-datepicker.ui-datepicker-multi {$/;"	c
+.ui-dialog	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog {$/;"	c
+.ui-dialog .ui-dialog-buttonpane	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-buttonpane {$/;"	c
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {$/;"	c
+.ui-dialog .ui-dialog-buttonpane button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-buttonpane button {$/;"	s
+.ui-dialog .ui-dialog-content	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-content {$/;"	c
+.ui-dialog .ui-dialog-title	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-title {$/;"	c
+.ui-dialog .ui-dialog-titlebar	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-titlebar {$/;"	c
+.ui-dialog .ui-dialog-titlebar-close	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-dialog-titlebar-close {$/;"	c
+.ui-dialog .ui-resizable-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-dialog .ui-resizable-se {$/;"	c
+.ui-draggable .ui-dialog-titlebar	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-draggable .ui-dialog-titlebar {$/;"	c
+.ui-draggable-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-draggable-handle {$/;"	c
+.ui-front	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-front {$/;"	c
+.ui-helper-clearfix	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-clearfix {$/;"	c
+.ui-helper-clearfix:after	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-clearfix:after {$/;"	c
+.ui-helper-clearfix:before	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-clearfix:before,$/;"	c
+.ui-helper-hidden	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-hidden {$/;"	c
+.ui-helper-hidden-accessible	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-hidden-accessible {$/;"	c
+.ui-helper-reset	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-reset {$/;"	c
+.ui-helper-zfix	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-helper-zfix {$/;"	c
+.ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon {$/;"	c
+.ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon,$/;"	c
+.ui-icon-alert	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-alert { background-position: 0 -144px; }$/;"	c
+.ui-icon-arrow-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-e { background-position: -32px -32px; }$/;"	c
+.ui-icon-arrow-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-n { background-position: 0 -32px; }$/;"	c
+.ui-icon-arrow-1-ne	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-ne { background-position: -16px -32px; }$/;"	c
+.ui-icon-arrow-1-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-nw { background-position: -112px -32px; }$/;"	c
+.ui-icon-arrow-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-s { background-position: -64px -32px; }$/;"	c
+.ui-icon-arrow-1-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-se { background-position: -48px -32px; }$/;"	c
+.ui-icon-arrow-1-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-sw { background-position: -80px -32px; }$/;"	c
+.ui-icon-arrow-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-1-w { background-position: -96px -32px; }$/;"	c
+.ui-icon-arrow-2-e-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-2-e-w { background-position: -160px -32px; }$/;"	c
+.ui-icon-arrow-2-n-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-2-n-s { background-position: -128px -32px; }$/;"	c
+.ui-icon-arrow-2-ne-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }$/;"	c
+.ui-icon-arrow-2-se-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }$/;"	c
+.ui-icon-arrow-4	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-4 { background-position: 0 -80px; }$/;"	c
+.ui-icon-arrow-4-diag	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrow-4-diag { background-position: -16px -80px; }$/;"	c
+.ui-icon-arrowrefresh-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }$/;"	c
+.ui-icon-arrowrefresh-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }$/;"	c
+.ui-icon-arrowrefresh-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }$/;"	c
+.ui-icon-arrowrefresh-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }$/;"	c
+.ui-icon-arrowreturn-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }$/;"	c
+.ui-icon-arrowreturn-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }$/;"	c
+.ui-icon-arrowreturn-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }$/;"	c
+.ui-icon-arrowreturn-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }$/;"	c
+.ui-icon-arrowreturnthick-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }$/;"	c
+.ui-icon-arrowreturnthick-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }$/;"	c
+.ui-icon-arrowreturnthick-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }$/;"	c
+.ui-icon-arrowreturnthick-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }$/;"	c
+.ui-icon-arrowstop-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowstop-1-e { background-position: -208px -32px; }$/;"	c
+.ui-icon-arrowstop-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowstop-1-n { background-position: -192px -32px; }$/;"	c
+.ui-icon-arrowstop-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowstop-1-s { background-position: -224px -32px; }$/;"	c
+.ui-icon-arrowstop-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowstop-1-w { background-position: -240px -32px; }$/;"	c
+.ui-icon-arrowthick-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-e { background-position: -32px -48px; }$/;"	c
+.ui-icon-arrowthick-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-n { background-position: 0 -48px; }$/;"	c
+.ui-icon-arrowthick-1-ne	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }$/;"	c
+.ui-icon-arrowthick-1-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }$/;"	c
+.ui-icon-arrowthick-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-s { background-position: -64px -48px; }$/;"	c
+.ui-icon-arrowthick-1-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-se { background-position: -48px -48px; }$/;"	c
+.ui-icon-arrowthick-1-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }$/;"	c
+.ui-icon-arrowthick-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-1-w { background-position: -96px -48px; }$/;"	c
+.ui-icon-arrowthick-2-e-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }$/;"	c
+.ui-icon-arrowthick-2-n-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }$/;"	c
+.ui-icon-arrowthick-2-ne-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }$/;"	c
+.ui-icon-arrowthick-2-se-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }$/;"	c
+.ui-icon-arrowthickstop-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }$/;"	c
+.ui-icon-arrowthickstop-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }$/;"	c
+.ui-icon-arrowthickstop-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }$/;"	c
+.ui-icon-arrowthickstop-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }$/;"	c
+.ui-icon-battery-0	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-battery-0 { background-position: -48px -176px; }$/;"	c
+.ui-icon-battery-1	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-battery-1 { background-position: -64px -176px; }$/;"	c
+.ui-icon-battery-2	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-battery-2 { background-position: -80px -176px; }$/;"	c
+.ui-icon-battery-3	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-battery-3 { background-position: -96px -176px; }$/;"	c
+.ui-icon-blank	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-blank { background-position: 16px 16px; }$/;"	c
+.ui-icon-bookmark	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-bookmark { background-position: -224px -96px; }$/;"	c
+.ui-icon-bullet	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-bullet { background-position: -80px -144px; }$/;"	c
+.ui-icon-calculator	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-calculator { background-position: -112px -112px; }$/;"	c
+.ui-icon-calendar	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-calendar { background-position: -32px -112px; }$/;"	c
+.ui-icon-cancel	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-cancel { background-position: 0 -128px; }$/;"	c
+.ui-icon-carat-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-e { background-position: -32px 0; }$/;"	c
+.ui-icon-carat-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-n { background-position: 0 0; }$/;"	c
+.ui-icon-carat-1-ne	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-ne { background-position: -16px 0; }$/;"	c
+.ui-icon-carat-1-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-nw { background-position: -112px 0; }$/;"	c
+.ui-icon-carat-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-s { background-position: -64px 0; }$/;"	c
+.ui-icon-carat-1-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-se { background-position: -48px 0; }$/;"	c
+.ui-icon-carat-1-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-sw { background-position: -80px 0; }$/;"	c
+.ui-icon-carat-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-1-w { background-position: -96px 0; }$/;"	c
+.ui-icon-carat-2-e-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-2-e-w { background-position: -144px 0; }$/;"	c
+.ui-icon-carat-2-n-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-carat-2-n-s { background-position: -128px 0; }$/;"	c
+.ui-icon-cart	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-cart { background-position: -48px -112px; }$/;"	c
+.ui-icon-check	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-check { background-position: -64px -144px; }$/;"	c
+.ui-icon-circle-arrow-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-arrow-e { background-position: -112px -192px; }$/;"	c
+.ui-icon-circle-arrow-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-arrow-n { background-position: -160px -192px; }$/;"	c
+.ui-icon-circle-arrow-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-arrow-s { background-position: -128px -192px; }$/;"	c
+.ui-icon-circle-arrow-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-arrow-w { background-position: -144px -192px; }$/;"	c
+.ui-icon-circle-check	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-check { background-position: -208px -192px; }$/;"	c
+.ui-icon-circle-close	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-close { background-position: -32px -192px; }$/;"	c
+.ui-icon-circle-minus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-minus { background-position: -16px -192px; }$/;"	c
+.ui-icon-circle-plus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-plus { background-position: 0 -192px; }$/;"	c
+.ui-icon-circle-triangle-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-triangle-e { background-position: -48px -192px; }$/;"	c
+.ui-icon-circle-triangle-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-triangle-n { background-position: -96px -192px; }$/;"	c
+.ui-icon-circle-triangle-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-triangle-s { background-position: -64px -192px; }$/;"	c
+.ui-icon-circle-triangle-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-triangle-w { background-position: -80px -192px; }$/;"	c
+.ui-icon-circle-zoomin	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-zoomin { background-position: -176px -192px; }$/;"	c
+.ui-icon-circle-zoomout	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circle-zoomout { background-position: -192px -192px; }$/;"	c
+.ui-icon-circlesmall-close	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circlesmall-close { background-position: -32px -208px; }$/;"	c
+.ui-icon-circlesmall-minus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circlesmall-minus { background-position: -16px -208px; }$/;"	c
+.ui-icon-circlesmall-plus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-circlesmall-plus { background-position: 0 -208px; }$/;"	c
+.ui-icon-clipboard	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-clipboard { background-position: -160px -128px; }$/;"	c
+.ui-icon-clock	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-clock { background-position: -80px -112px; }$/;"	c
+.ui-icon-close	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-close { background-position: -80px -128px; }$/;"	c
+.ui-icon-closethick	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-closethick { background-position: -96px -128px; }$/;"	c
+.ui-icon-comment	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-comment { background-position: -128px -96px; }$/;"	c
+.ui-icon-contact	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-contact { background-position: -192px -128px; }$/;"	c
+.ui-icon-copy	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-copy { background-position: -176px -128px; }$/;"	c
+.ui-icon-disk	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-disk { background-position: -96px -112px; }$/;"	c
+.ui-icon-document	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-document { background-position: -32px -96px; }$/;"	c
+.ui-icon-document-b	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-document-b { background-position: -48px -96px; }$/;"	c
+.ui-icon-eject	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-eject { background-position: -112px -160px; }$/;"	c
+.ui-icon-extlink	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-extlink { background-position: -32px -80px; }$/;"	c
+.ui-icon-flag	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-flag { background-position: -16px -112px; }$/;"	c
+.ui-icon-folder-collapsed	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-folder-collapsed { background-position: 0 -96px; }$/;"	c
+.ui-icon-folder-open	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-folder-open { background-position: -16px -96px; }$/;"	c
+.ui-icon-gear	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-gear { background-position: -192px -112px; }$/;"	c
+.ui-icon-grip-diagonal-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-grip-diagonal-se { background-position: -80px -224px; }$/;"	c
+.ui-icon-grip-dotted-horizontal	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }$/;"	c
+.ui-icon-grip-dotted-vertical	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }$/;"	c
+.ui-icon-grip-solid-horizontal	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }$/;"	c
+.ui-icon-grip-solid-vertical	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-grip-solid-vertical { background-position: -32px -224px; }$/;"	c
+.ui-icon-gripsmall-diagonal-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }$/;"	c
+.ui-icon-heart	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-heart { background-position: -208px -112px; }$/;"	c
+.ui-icon-help	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-help { background-position: -48px -144px; }$/;"	c
+.ui-icon-home	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-home { background-position: 0 -112px; }$/;"	c
+.ui-icon-image	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-image { background-position: -208px -128px; }$/;"	c
+.ui-icon-info	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-info { background-position: -16px -144px; }$/;"	c
+.ui-icon-key	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-key { background-position: -112px -128px; }$/;"	c
+.ui-icon-lightbulb	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-lightbulb { background-position: -128px -128px; }$/;"	c
+.ui-icon-link	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-link { background-position: -240px -112px; }$/;"	c
+.ui-icon-locked	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-locked { background-position: -192px -96px; }$/;"	c
+.ui-icon-mail-closed	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-mail-closed { background-position: -80px -96px; }$/;"	c
+.ui-icon-mail-open	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-mail-open { background-position: -96px -96px; }$/;"	c
+.ui-icon-minus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-minus { background-position: -48px -128px; }$/;"	c
+.ui-icon-minusthick	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-minusthick { background-position: -64px -128px; }$/;"	c
+.ui-icon-newwin	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-newwin { background-position: -48px -80px; }$/;"	c
+.ui-icon-note	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-note { background-position: -64px -96px; }$/;"	c
+.ui-icon-notice	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-notice { background-position: -32px -144px; }$/;"	c
+.ui-icon-pause	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-pause { background-position: -16px -160px; }$/;"	c
+.ui-icon-pencil	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-pencil { background-position: -64px -112px; }$/;"	c
+.ui-icon-person	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-person { background-position: -144px -96px; }$/;"	c
+.ui-icon-pin-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-pin-s { background-position: -144px -144px; }$/;"	c
+.ui-icon-pin-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-pin-w { background-position: -128px -144px; }$/;"	c
+.ui-icon-play	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-play { background-position: 0 -160px; }$/;"	c
+.ui-icon-plus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-plus { background-position: -16px -128px; }$/;"	c
+.ui-icon-plusthick	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-plusthick { background-position: -32px -128px; }$/;"	c
+.ui-icon-power	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-power { background-position: 0 -176px; }$/;"	c
+.ui-icon-print	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-print { background-position: -160px -96px; }$/;"	c
+.ui-icon-radio-off	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-radio-off { background-position: -112px -144px; }$/;"	c
+.ui-icon-radio-on	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-radio-on { background-position: -96px -144px; }$/;"	c
+.ui-icon-refresh	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-refresh { background-position: -64px -80px; }$/;"	c
+.ui-icon-scissors	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-scissors { background-position: -144px -128px; }$/;"	c
+.ui-icon-script	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-script { background-position: -240px -128px; }$/;"	c
+.ui-icon-search	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-search { background-position: -160px -112px; }$/;"	c
+.ui-icon-seek-end	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-seek-end { background-position: -64px -160px; }$/;"	c
+.ui-icon-seek-first	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-seek-first { background-position: -80px -160px; }$/;"	c
+.ui-icon-seek-next	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-seek-next { background-position: -32px -160px; }$/;"	c
+.ui-icon-seek-prev	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-seek-prev { background-position: -48px -160px; }$/;"	c
+.ui-icon-seek-start	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-seek-start { background-position: -80px -160px; }$/;"	c
+.ui-icon-shuffle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-shuffle { background-position: -80px -80px; }$/;"	c
+.ui-icon-signal	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-signal { background-position: -32px -176px; }$/;"	c
+.ui-icon-signal-diag	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-signal-diag { background-position: -16px -176px; }$/;"	c
+.ui-icon-squaresmall-close	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-squaresmall-close { background-position: -80px -208px; }$/;"	c
+.ui-icon-squaresmall-minus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-squaresmall-minus { background-position: -64px -208px; }$/;"	c
+.ui-icon-squaresmall-plus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-squaresmall-plus { background-position: -48px -208px; }$/;"	c
+.ui-icon-star	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-star { background-position: -224px -112px; }$/;"	c
+.ui-icon-stop	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-stop { background-position: -96px -160px; }$/;"	c
+.ui-icon-suitcase	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-suitcase { background-position: -112px -96px; }$/;"	c
+.ui-icon-tag	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-tag { background-position: -240px -96px; }$/;"	c
+.ui-icon-transfer-e-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-transfer-e-w { background-position: -96px -80px; }$/;"	c
+.ui-icon-transferthick-e-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-transferthick-e-w { background-position: -112px -80px; }$/;"	c
+.ui-icon-trash	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-trash { background-position: -176px -96px; }$/;"	c
+.ui-icon-triangle-1-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-e { background-position: -32px -16px; }$/;"	c
+.ui-icon-triangle-1-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-n { background-position: 0 -16px; }$/;"	c
+.ui-icon-triangle-1-ne	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-ne { background-position: -16px -16px; }$/;"	c
+.ui-icon-triangle-1-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-nw { background-position: -112px -16px; }$/;"	c
+.ui-icon-triangle-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-s { background-position: -64px -16px; }$/;"	c
+.ui-icon-triangle-1-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-se { background-position: -48px -16px; }$/;"	c
+.ui-icon-triangle-1-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-sw { background-position: -80px -16px; }$/;"	c
+.ui-icon-triangle-1-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-1-w { background-position: -96px -16px; }$/;"	c
+.ui-icon-triangle-2-e-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-2-e-w { background-position: -144px -16px; }$/;"	c
+.ui-icon-triangle-2-n-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-triangle-2-n-s { background-position: -128px -16px; }$/;"	c
+.ui-icon-unlocked	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-unlocked { background-position: -208px -96px; }$/;"	c
+.ui-icon-video	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-video { background-position: -224px -128px; }$/;"	c
+.ui-icon-volume-off	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-volume-off { background-position: -128px -160px; }$/;"	c
+.ui-icon-volume-on	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-volume-on { background-position: -144px -160px; }$/;"	c
+.ui-icon-wrench	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-wrench { background-position: -176px -112px; }$/;"	c
+.ui-icon-zoomin	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-zoomin { background-position: -128px -112px; }$/;"	c
+.ui-icon-zoomout	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-icon-zoomout { background-position: -144px -112px; }$/;"	c
+.ui-menu	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu {$/;"	c
+.ui-menu .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-icon {$/;"	c
+.ui-menu .ui-menu	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-menu {$/;"	c
+.ui-menu .ui-menu-divider	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-menu-divider {$/;"	c
+.ui-menu .ui-menu-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-menu-icon {$/;"	c
+.ui-menu .ui-menu-item	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-menu-item {$/;"	c
+.ui-menu .ui-state-active	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-state-active {$/;"	c
+.ui-menu .ui-state-focus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu .ui-state-focus,$/;"	c
+.ui-menu-icons	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu-icons {$/;"	c
+.ui-menu-icons .ui-menu-item	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-menu-icons .ui-menu-item {$/;"	c
+.ui-menu-item	./build/docs.gl/html/copy/style_dark.css	/^.ui-menu-item {$/;"	c
+.ui-menu-item	./build/docs.gl/html/copy/style_light.css	/^.ui-menu-item {$/;"	c
+.ui-priority-primary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-priority-primary,$/;"	c
+.ui-priority-secondary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-priority-secondary,$/;"	c
+.ui-progressbar	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-progressbar {$/;"	c
+.ui-progressbar .ui-progressbar-overlay	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-progressbar .ui-progressbar-overlay {$/;"	c
+.ui-progressbar .ui-progressbar-value	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-progressbar .ui-progressbar-value {$/;"	c
+.ui-progressbar-indeterminate .ui-progressbar-value	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-progressbar-indeterminate .ui-progressbar-value {$/;"	c
+.ui-resizable	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable {$/;"	c
+.ui-resizable-autohide .ui-resizable-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-autohide .ui-resizable-handle {$/;"	c
+.ui-resizable-disabled .ui-resizable-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-disabled .ui-resizable-handle,$/;"	c
+.ui-resizable-e	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-e {$/;"	c
+.ui-resizable-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-handle {$/;"	c
+.ui-resizable-n	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-n {$/;"	c
+.ui-resizable-ne	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-ne {$/;"	c
+.ui-resizable-nw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-nw {$/;"	c
+.ui-resizable-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-s {$/;"	c
+.ui-resizable-se	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-se {$/;"	c
+.ui-resizable-sw	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-sw {$/;"	c
+.ui-resizable-w	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-resizable-w {$/;"	c
+.ui-selectable	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectable {$/;"	c
+.ui-selectable-helper	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectable-helper {$/;"	c
+.ui-selectmenu-button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-button {$/;"	c
+.ui-selectmenu-button span.ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-button span.ui-icon {$/;"	c
+.ui-selectmenu-button span.ui-selectmenu-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-button span.ui-selectmenu-text {$/;"	c
+.ui-selectmenu-menu	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-menu {$/;"	c
+.ui-selectmenu-menu .ui-menu	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-menu .ui-menu {$/;"	c
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {$/;"	c
+.ui-selectmenu-open	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-selectmenu-open {$/;"	c
+.ui-selectmenu-open ul .ui-state-focus	./build/docs.gl/html/copy/style_dark.css	/^.ui-selectmenu-open ul .ui-state-focus, .ui-state-default {$/;"	c
+.ui-selectmenu-open ul .ui-state-focus	./build/docs.gl/html/copy/style_light.css	/^.ui-selectmenu-open ul .ui-state-focus, .ui-state-default {$/;"	c
+.ui-selectmenu-open ul .ui-state-focus	./build/docs.gl/html/style.css	/^.ui-selectmenu-open ul .ui-state-focus {$/;"	c
+.ui-slider	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider {$/;"	c
+.ui-slider .ui-slider-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider .ui-slider-handle {$/;"	c
+.ui-slider .ui-slider-range	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider .ui-slider-range {$/;"	c
+.ui-slider-horizontal	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-horizontal {$/;"	c
+.ui-slider-horizontal .ui-slider-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-horizontal .ui-slider-handle {$/;"	c
+.ui-slider-horizontal .ui-slider-range	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-horizontal .ui-slider-range {$/;"	c
+.ui-slider-horizontal .ui-slider-range-max	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-horizontal .ui-slider-range-max {$/;"	c
+.ui-slider-horizontal .ui-slider-range-min	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-horizontal .ui-slider-range-min {$/;"	c
+.ui-slider-vertical	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-vertical {$/;"	c
+.ui-slider-vertical .ui-slider-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-vertical .ui-slider-handle {$/;"	c
+.ui-slider-vertical .ui-slider-range	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-vertical .ui-slider-range {$/;"	c
+.ui-slider-vertical .ui-slider-range-max	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-vertical .ui-slider-range-max {$/;"	c
+.ui-slider-vertical .ui-slider-range-min	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider-vertical .ui-slider-range-min {$/;"	c
+.ui-slider.ui-state-disabled .ui-slider-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider.ui-state-disabled .ui-slider-handle,$/;"	c
+.ui-slider.ui-state-disabled .ui-slider-range	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-slider.ui-state-disabled .ui-slider-range {$/;"	c
+.ui-sortable-handle	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-sortable-handle {$/;"	c
+.ui-spinner	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner {$/;"	c
+.ui-spinner .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner .ui-icon {$/;"	c
+.ui-spinner .ui-icon-triangle-1-s	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner .ui-icon-triangle-1-s {$/;"	c
+.ui-spinner a.ui-spinner-button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner a.ui-spinner-button {$/;"	c
+.ui-spinner-button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner-button {$/;"	c
+.ui-spinner-down	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner-down {$/;"	c
+.ui-spinner-input	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner-input {$/;"	c
+.ui-spinner-up	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-spinner-up {$/;"	c
+.ui-state-active	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-active,$/;"	c
+.ui-state-active .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-active .ui-icon {$/;"	c
+.ui-state-active a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-active a,$/;"	s
+.ui-state-active a:link	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-active a:link,$/;"	s
+.ui-state-active a:visited	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-active a:visited {$/;"	s
+.ui-state-default	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-default,$/;"	c
+.ui-state-default	./build/docs.gl/html/copy/style_dark.css	/^.ui-autocomplete .ui-state-focus, .ui-state-default {$/;"	c
+.ui-state-default	./build/docs.gl/html/copy/style_dark.css	/^.ui-selectmenu-open ul .ui-state-focus, .ui-state-default {$/;"	c
+.ui-state-default	./build/docs.gl/html/copy/style_light.css	/^.ui-autocomplete .ui-state-focus, .ui-state-default {$/;"	c
+.ui-state-default	./build/docs.gl/html/copy/style_light.css	/^.ui-selectmenu-open ul .ui-state-focus, .ui-state-default {$/;"	c
+.ui-state-default .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-default .ui-icon {$/;"	c
+.ui-state-default a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-default a,$/;"	s
+.ui-state-default a:link	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-default a:link,$/;"	s
+.ui-state-default a:visited	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-default a:visited {$/;"	s
+.ui-state-disabled	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-disabled {$/;"	c
+.ui-state-disabled	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-disabled,$/;"	c
+.ui-state-disabled .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-disabled .ui-icon {$/;"	c
+.ui-state-error	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-error,$/;"	c
+.ui-state-error .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-error .ui-icon,$/;"	c
+.ui-state-error a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-error a,$/;"	s
+.ui-state-error-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-error-text,$/;"	c
+.ui-state-error-text .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-error-text .ui-icon {$/;"	c
+.ui-state-focus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-focus,$/;"	c
+.ui-state-focus .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-focus .ui-icon {$/;"	c
+.ui-state-focus a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-focus a,$/;"	s
+.ui-state-focus a:hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-focus a:hover,$/;"	s
+.ui-state-focus a:link	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-focus a:link,$/;"	s
+.ui-state-focus a:visited	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-focus a:visited {$/;"	s
+.ui-state-highlight	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-highlight,$/;"	c
+.ui-state-highlight .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-highlight .ui-icon {$/;"	c
+.ui-state-highlight a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-highlight a,$/;"	s
+.ui-state-hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-hover,$/;"	c
+.ui-state-hover .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-hover .ui-icon,$/;"	c
+.ui-state-hover a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-hover a,$/;"	s
+.ui-state-hover a:hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-hover a:hover,$/;"	s
+.ui-state-hover a:link	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-hover a:link,$/;"	s
+.ui-state-hover a:visited	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-state-hover a:visited,$/;"	s
+.ui-tabs	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs {$/;"	c
+.ui-tabs .ui-tabs-nav	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav {$/;"	c
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav .ui-tabs-anchor {$/;"	c
+.ui-tabs .ui-tabs-nav li	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav li {$/;"	s
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,$/;"	c
+.ui-tabs .ui-tabs-nav li.ui-tabs-active	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav li.ui-tabs-active {$/;"	c
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,$/;"	c
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {$/;"	c
+.ui-tabs .ui-tabs-panel	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs .ui-tabs-panel {$/;"	c
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {$/;"	c
+.ui-tooltip	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-tooltip {$/;"	c
+.ui-widget	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget {$/;"	c
+.ui-widget .ui-widget	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget .ui-widget {$/;"	c
+.ui-widget button	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget button {$/;"	s
+.ui-widget input	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget input,$/;"	s
+.ui-widget select	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget select,$/;"	s
+.ui-widget textarea	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget textarea,$/;"	s
+.ui-widget-content	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content {$/;"	c
+.ui-widget-content .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-icon {$/;"	c
+.ui-widget-content .ui-priority-primary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-priority-primary,$/;"	c
+.ui-widget-content .ui-priority-secondary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-priority-secondary,$/;"	c
+.ui-widget-content .ui-state-active	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-active,$/;"	c
+.ui-widget-content .ui-state-default	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-default,$/;"	c
+.ui-widget-content .ui-state-disabled	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-disabled,$/;"	c
+.ui-widget-content .ui-state-error	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-error,$/;"	c
+.ui-widget-content .ui-state-error a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-error a,$/;"	s
+.ui-widget-content .ui-state-error-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-error-text,$/;"	c
+.ui-widget-content .ui-state-focus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-focus,$/;"	c
+.ui-widget-content .ui-state-highlight	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-highlight,$/;"	c
+.ui-widget-content .ui-state-highlight a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-highlight a,$/;"	s
+.ui-widget-content .ui-state-hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content .ui-state-hover,$/;"	c
+.ui-widget-content a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-content a {$/;"	s
+.ui-widget-header	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header {$/;"	c
+.ui-widget-header .ui-icon	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-icon {$/;"	c
+.ui-widget-header .ui-priority-primary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-priority-primary {$/;"	c
+.ui-widget-header .ui-priority-secondary	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-priority-secondary {$/;"	c
+.ui-widget-header .ui-state-active	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-active {$/;"	c
+.ui-widget-header .ui-state-default	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-default {$/;"	c
+.ui-widget-header .ui-state-disabled	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-disabled {$/;"	c
+.ui-widget-header .ui-state-error	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-error {$/;"	c
+.ui-widget-header .ui-state-error a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-error a {$/;"	s
+.ui-widget-header .ui-state-error-text	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-error-text {$/;"	c
+.ui-widget-header .ui-state-focus	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-focus {$/;"	c
+.ui-widget-header .ui-state-highlight	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-highlight {$/;"	c
+.ui-widget-header .ui-state-highlight a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-highlight a {$/;"	s
+.ui-widget-header .ui-state-hover	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header .ui-state-hover,$/;"	c
+.ui-widget-header a	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-header a {$/;"	s
+.ui-widget-overlay	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-overlay {$/;"	c
+.ui-widget-shadow	./build/docs.gl/html/copy/jquery-ui.css	/^.ui-widget-shadow {$/;"	c
+.versioncolumn	./build/docs.gl/html/copy/media.css	/^	.versioncolumn,$/;"	c
+.xslversioncolumn	./build/docs.gl/html/copy/media.css	/^	.xslversioncolumn {$/;"	c
+.xversioncolumn	./build/docs.gl/html/copy/media.css	/^	.xversioncolumn {$/;"	c
+API	./build/docs.gl/compile.py	/^         API="GLSL"$/;"	v
+API	./build/docs.gl/compile.py	/^         API="OpenGL"$/;"	v
+API	./build/docs.gl/compile.py	/^      API=""$/;"	v
+API_type	./build/docs.gl/compile.py	/^    API_type = "gl"$/;"	v
+API_type	./build/docs.gl/compile.py	/^    API_type = "sl"$/;"	v
+API_type	./build/docs.gl/compile.py	/^  API_type = ""$/;"	v
+About docs.gl	./build/docs.gl/html/copy/about.html	/^<title>About docs.gl<\/title>$/;"	j
+Add	./code/index/index.go	/^func (index *index) Add(documentName string, terms []string) {$/;"	f	struct:index.index
+Buffer	./code/parser/htmlparser.go	/^	Buffer []rune$/;"	m	struct:parser.ParserEvent	typeref:typename:[]rune
+Contributions Welcome	./build/docs.gl/readme.md	/^Contributions Welcome$/;"	s	chapter:docs.gl
+ET	./build/docs.gl/read_glsl_spec.py	/^import xml.etree.ElementTree as ET$/;"	I	nameref:module:xml.etree.ElementTree
+ET	./build/docs.gl/read_spec.py	/^import xml.etree.ElementTree as ET$/;"	I	nameref:module:xml.etree.ElementTree
+Error	./code/parser/htmlparser.go	/^	Error  error$/;"	m	struct:parser.ParserEvent	typeref:typename:error
+EventTypeAttributeKey	./code/parser/htmlparser.go	/^	EventTypeAttributeKey                    \/\/ triggered right after the h in <a href="example.c/;"	c	package:parser
+EventTypeAttributeValue	./code/parser/htmlparser.go	/^	EventTypeAttributeValue                  \/\/ triggered right after the = in <a href="example.c/;"	c	package:parser
+EventTypeClosingTag	./code/parser/htmlparser.go	/^	EventTypeClosingTag                      \/\/ triggered right after the \/ in <\/html> is read /;"	c	package:parser
+EventTypeComment	./code/parser/htmlparser.go	/^	EventTypeComment                         \/\/$/;"	c	package:parser
+EventTypeEndDocument	./code/parser/htmlparser.go	/^	EventTypeEndDocument                     \/\/ triggered right after the > symbol of <\/html> is/;"	c	package:parser
+EventTypeOpeningTag	./code/parser/htmlparser.go	/^	EventTypeOpeningTag                      \/\/ triggered right after the h in <html> is read (an/;"	c	package:parser
+EventTypeTextNode	./code/parser/htmlparser.go	/^	EventTypeTextNode       eventType = iota \/\/ "my", "name", "is", "collins" - an eventTextNode /;"	c	package:parser	typeref:type:eventType
+EventTypeUnknown	./code/parser/htmlparser.go	/^	EventTypeUnknown                         \/\/ used to signal that an event.type is not set$/;"	c	package:parser
+FONTS	./build/docs.gl/compile.py	/^FONTS = [$/;"	v
+File Structure	./build/docs.gl/readme.md	/^File Structure$/;"	s	chapter:docs.gl
+Handler	./build/docs.gl/server.py	/^Handler = http.server.SimpleHTTPRequestHandler$/;"	v
+Handler	./build/docs.gl/start_offline_webserver.py	/^class Handler(http.server.SimpleHTTPRequestHandler):$/;"	c
+How To Build It	./build/docs.gl/readme.md	/^How To Build It$/;"	s	chapter:docs.gl
+JS_LIBS	./build/docs.gl/compile.py	/^JS_LIBS = [$/;"	v
+NewIndex	./code/index/index.go	/^func NewIndex() *index {$/;"	f	package:index	typeref:typename:*index
+Normalize	./code/text/normalize.go	/^func Normalize(input *[]rune) {$/;"	f	package:text
+Offline Viewing	./build/docs.gl/readme.md	/^Offline Viewing$/;"	s	chapter:docs.gl
+PORT	./build/docs.gl/server.py	/^PORT = 8000$/;"	v
+Parse	./code/parser/htmlparser.go	/^func Parse(input io.Reader) func(*ParserEvent) {$/;"	f	package:parser	typeref:typename:func(*ParserEvent)
+ParserEvent	./code/parser/htmlparser.go	/^type ParserEvent struct {$/;"	s	package:parser
+PorterStem	./code/text/stem.go	/^func PorterStem(input *[]rune) {$/;"	f	package:text
+Search	./code/index/index.go	/^func (index *index) Search(query string) {$/;"	f	struct:index.index
+Search2	./code/index/index.go	/^func (index *index) Search2(term string) {$/;"	f	struct:index.index
+TestIndexAdd	./code/index/index_test.go	/^func TestIndexAdd(t *testing.T) {$/;"	f	package:index
+TestNormalize	./code/text/text_test.go	/^func TestNormalize(t *testing.T) {$/;"	f	package:text
+TestParser	./code/parser/htmlparser_test.go	/^func TestParser(t *testing.T) {$/;"	f	package:parser
+TestPorterStem	./code/text/text_test.go	/^func TestPorterStem(t *testing.T) {$/;"	f	package:text
+To Do	./build/docs.gl/readme.md	/^To Do$/;"	s	chapter:docs.gl
+ToDo	./build/docs.gl/todo.md	/^ToDo$/;"	s
+Type	./code/parser/htmlparser.go	/^	Type   eventType$/;"	m	struct:parser.ParserEvent	typeref:typename:eventType
+a	./build/docs.gl/html/copy/style_dark.css	/^a {$/;"	s
+a	./build/docs.gl/html/copy/style_light.css	/^a {$/;"	s
+a	./build/docs.gl/html/style.css	/^a {$/;"	s
+a	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+a.disabled	./build/docs.gl/html/copy/style_dark.css	/^.disabled, .disabled a, a.disabled {$/;"	c
+a.disabled	./build/docs.gl/html/copy/style_light.css	/^.disabled, .disabled a, a.disabled {$/;"	c
+a:hover	./build/docs.gl/html/copy/style_dark.css	/^a:hover {$/;"	s
+a:hover	./build/docs.gl/html/copy/style_light.css	/^a:hover {$/;"	s
+a:visited	./build/docs.gl/html/copy/style_dark.css	/^a:visited {$/;"	s
+a:visited	./build/docs.gl/html/copy/style_light.css	/^a:visited {$/;"	s
+abbr	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+acronym	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+address	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+alias	./build/docs.gl/compile.py	/^      alias = aliases[version]$/;"	v
+alias	./build/docs.gl/compile.py	/^    alias = command$/;"	v
+aliased_functions	./build/docs.gl/glsl.py	/^aliased_functions = {}$/;"	v
+aliased_functions	./build/docs.gl/opengl.py	/^aliased_functions = {}$/;"	v
+aliases	./build/docs.gl/compile.py	/^  aliases = {}$/;"	v
+all_major_versions	./build/docs.gl/compile.py	/^  all_major_versions = glsl.get_major_versions(glsl.version_commands_flat.keys())$/;"	v
+all_major_versions	./build/docs.gl/compile.py	/^  all_major_versions = opengl.get_major_versions(opengl.version_commands_flat.keys())$/;"	v
+all_major_versions_available	./build/docs.gl/compile.py	/^  all_major_versions_available = []$/;"	v
+all_versions	./build/docs.gl/compile.py	/^  all_versions = [];$/;"	v
+all_versions	./build/docs.gl/compile.py	/^  all_versions = list(opengl.version_commands.keys())$/;"	v
+anonymousFunction39130a1d0200	./build/docs.gl/html/copy/docs.gl.js	/^	$(".rewritelink").each(function() {$/;"	f
+anonymousFunction39130a1d0400	./build/docs.gl/html/copy/docs.gl.js	/^		$(".command_categories > li").each(function() {$/;"	f
+anonymousFunction39130a1d0500	./build/docs.gl/html/copy/docs.gl.js	/^$(function() {$/;"	f
+anonymousFunction39130a1d0700	./build/docs.gl/html/copy/docs.gl.js	/^	$("#style_light").click(function() {$/;"	f
+anonymousFunction39130a1d0900	./build/docs.gl/html/copy/docs.gl.js	/^	$("#style_dark").click(function() {$/;"	f
+anonymousFunction39130a1d0b00	./build/docs.gl/html/copy/docs.gl.js	/^	$(".open_me").each(function() {$/;"	f
+anonymousFunction39130a1d0d00	./build/docs.gl/html/copy/docs.gl.js	/^	$( "#search_button" ).button().click(function(event) {$/;"	f
+anonymousFunction39130a1d1300	./build/docs.gl/html/copy/docs.gl.js	/^	$('#hide_deprecated').click(function() {$/;"	f
+anonymousFunction91ee03f70100	./build/docs.gl/html/docs.gl.search.js	/^$(function() {$/;"	f
+anonymousObject39130a1d0105	./build/docs.gl/html/copy/docs.gl.js	/^	$.cookie("api_version", version, {path: '\/'});$/;"	v
+anonymousObject39130a1d0605	./build/docs.gl/html/copy/docs.gl.js	/^	$( "#versions_dropdown" ).selectmenu({$/;"	v
+anonymousObject39130a1d0805	./build/docs.gl/html/copy/docs.gl.js	/^		$.cookie("pagestyle", "light", {path: '\/'});$/;"	v
+anonymousObject39130a1d0a05	./build/docs.gl/html/copy/docs.gl.js	/^		$.cookie("pagestyle", "dark", {path: '\/'});$/;"	v
+anonymousObject39130a1d0e05	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ content: "<span style='color:#ff5555' >Command Not Found<\/span>" });$/;"	v
+anonymousObject39130a1d0f05	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ show: { duration: 100  } });$/;"	v
+anonymousObject39130a1d1005	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ hide: { duration: 1000  } });$/;"	v
+anonymousObject39130a1d1105	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({$/;"	v
+anonymousObject39130a1d1205	./build/docs.gl/html/copy/docs.gl.js	/^	$( "#search" ).autocomplete({$/;"	v
+anonymousObject39130a1d1405	./build/docs.gl/html/copy/docs.gl.js	/^		$.cookie("hide_deprecated", window.hide_deprecated, {path: '\/'});$/;"	v
+api_commands	./build/docs.gl/compile.py	/^    api_commands = ""$/;"	v
+applet	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+args	./build/docs.gl/compile.py	/^args = parser.parse_args()$/;"	v
+article	./build/docs.gl/html/style.css	/^article, aside, canvas, details, embed,$/;"	s
+article	./build/docs.gl/html/style.css	/^article, aside, details, figcaption, figure,$/;"	s
+aside	./build/docs.gl/html/style.css	/^article, aside, canvas, details, embed,$/;"	s
+aside	./build/docs.gl/html/style.css	/^article, aside, details, figcaption, figure,$/;"	s
+audio	./build/docs.gl/html/style.css	/^time, mark, audio, video {$/;"	s
+b	./build/docs.gl/html/style.css	/^b, u, i, center,$/;"	s
+baseRune	./code/text/normalize.go	/^var baseRune = map[rune]rune{$/;"	v	package:text
+big	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+blockquote	./build/docs.gl/html/style.css	/^blockquote, q {$/;"	s
+blockquote	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+blockquote:after	./build/docs.gl/html/style.css	/^blockquote:before, blockquote:after,$/;"	s
+blockquote:before	./build/docs.gl/html/style.css	/^blockquote:before, blockquote:after,$/;"	s
+body	./build/docs.gl/html/copy/media.css	/^	body {$/;"	s
+body	./build/docs.gl/html/copy/style_dark.css	/^body {$/;"	s
+body	./build/docs.gl/html/copy/style_light.css	/^body {$/;"	s
+body	./build/docs.gl/html/style.css	/^body {$/;"	s
+body	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+body .ui-tooltip	./build/docs.gl/html/copy/jquery-ui.css	/^body .ui-tooltip {$/;"	c
+button.ui-button-icon-only	./build/docs.gl/html/copy/jquery-ui.css	/^button.ui-button-icon-only {$/;"	c
+button.ui-button-icons-only	./build/docs.gl/html/copy/jquery-ui.css	/^button.ui-button-icons-only {$/;"	c
+button.ui-button::-moz-focus-inner	./build/docs.gl/html/copy/jquery-ui.css	/^button.ui-button::-moz-focus-inner {$/;"	c
+canvas	./build/docs.gl/html/style.css	/^article, aside, canvas, details, embed,$/;"	s
+caption	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+center	./build/docs.gl/html/style.css	/^b, u, i, center,$/;"	s
+change	./build/docs.gl/html/copy/docs.gl.js	/^		change: function( event, ui ) {$/;"	m	variable:anonymousObject39130a1d0605
+cite	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+close	./build/docs.gl/html/copy/docs.gl.js	/^				close: function( event, ui ) {$/;"	m	variable:anonymousObject39130a1d1105
+code	./build/docs.gl/compile.py	/^            code = glsl.examples[example['example']]['code']$/;"	v
+code	./build/docs.gl/compile.py	/^            code = opengl.examples[example['example']]['code']$/;"	v
+code	./build/docs.gl/compile.py	/^        code = code.replace("&", "&amp;")$/;"	v
+code	./build/docs.gl/compile.py	/^        code = code.replace("<", "&lt;")$/;"	v
+code	./build/docs.gl/compile.py	/^        code = code.replace(">", "&gt;")$/;"	v
+code	./build/docs.gl/compile.py	/^        code = code.replace("\\t", "    ")$/;"	v
+code	./build/docs.gl/compile.py	/^        code = re.sub(r"(?<![a-zA-Z0-9_])(auto|break|case|char|const|continue|default|do|double|/;"	v
+code	./build/docs.gl/compile.py	/^        code = re.sub(r"(GL_[A-Z_0-9]*)", r"<span class='constant'>\\1<\/span>", code)$/;"	v
+code	./build/docs.gl/compile.py	/^        code = re.sub(r"\\{%([a-zA-Z_][a-zA-Z_0-9]*?)\\}", replace_alias, code)$/;"	v
+code	./build/docs.gl/compile.py	/^        code = re.sub(r'(".*?")', r"<span class='codestring'>\\1<\/span>", code)$/;"	v
+code	./build/docs.gl/compile.py	/^        code = re.sub(r'(\/\/.*?)\\n', r"<span class='codecomment'>\\1<\/span>\\n", code)$/;"	v
+code	./build/docs.gl/compile.py	/^        code={}$/;"	v
+code	./build/docs.gl/html/style.css	/^.programlisting, code {$/;"	s
+code	./build/docs.gl/html/style.css	/^a, abbr, acronym, address, big, cite, code,$/;"	s
+commads	./build/docs.gl/read_glsl_spec.py	/^commads = glroot[1];$/;"	v
+command_categories	./build/docs.gl/glsl.py	/^command_categories = OrderedDict([$/;"	v
+command_categories	./build/docs.gl/html/header.html	/^      <ul id="command_categories">{$api_commands}<\/ul>$/;"	I
+command_categories	./build/docs.gl/opengl.py	/^command_categories = OrderedDict([$/;"	v
+command_docs	./build/docs.gl/read_glsl_spec.py	/^          command_docs = test_replacements(api, command_name)$/;"	v
+command_docs	./build/docs.gl/read_spec.py	/^          command_docs = test_replacements(gldir, command)$/;"	v
+command_docs	./build/docs.gl/read_spec.py	/^      command_docs = command$/;"	v
+command_file	./build/docs.gl/compile.py	/^        command_file = shared.find_command_file(version, command)$/;"	v
+command_file	./build/docs.gl/compile.py	/^        command_file = shared_glsl.find_command_file(version, command)$/;"	v
+command_file	./build/docs.gl/compile.py	/^    command_file = {}$/;"	v
+command_file	./build/docs.gl/read_glsl_spec.py	/^          command_file = shared_glsl.find_command_file(api, command_docs)$/;"	v
+command_file	./build/docs.gl/read_glsl_spec.py	/^        command_file = shared_glsl.find_command_file(api, command_name)$/;"	v
+command_file	./build/docs.gl/read_spec.py	/^          command_file = shared.find_command_file(gldir, command_docs)$/;"	v
+command_file	./build/docs.gl/read_spec.py	/^        command_file = shared.find_command_file(gldir, command)$/;"	v
+command_html	./build/docs.gl/compile.py	/^        command_html = fp.read()$/;"	v
+command_html	./build/docs.gl/compile.py	/^      command_html = command_html$/;"	v
+command_html	./build/docs.gl/compile.py	/^    command_html = command_html.replace("{$examples}", examples_html)$/;"	v
+command_html	./build/docs.gl/compile.py	/^    command_html = command_html.replace("{$pipelinestall}", "")$/;"	v
+command_html	./build/docs.gl/compile.py	/^    command_html = re.sub(r'<(\/?)mml:(.*?)>', r'<\\1\\2>', command_html)$/;"	v
+command_major_versions	./build/docs.gl/compile.py	/^        command_major_versions = glsl.get_major_versions_available(command)$/;"	v
+command_major_versions	./build/docs.gl/compile.py	/^        command_major_versions = opengl.get_major_versions_available(command)$/;"	v
+command_major_versions	./build/docs.gl/compile.py	/^    command_major_versions ={}$/;"	v
+command_title	./build/docs.gl/html/header.html	/^      <h1 id="command_title">{$command}<\/h1>$/;"	I
+command_versions	./build/docs.gl/compile.py	/^    command_versions = ""$/;"	v
+command_versions	./build/docs.gl/html/header.html	/^      <div id="command_versions">{$command_versions}<\/div>$/;"	I
+commandlist	./build/docs.gl/html/index.html	/^	<div id="commandlist">{$commandlist}<\/div>$/;"	I
+commands_version	./build/docs.gl/glsl.py	/^commands_version = {}$/;"	v
+commands_version	./build/docs.gl/opengl.py	/^commands_version = {}$/;"	v
+commands_version_flat	./build/docs.gl/compile.py	/^    commands_version_flat = glsl.commands_version_flat  $/;"	v
+commands_version_flat	./build/docs.gl/compile.py	/^    commands_version_flat = opengl.commands_version_flat$/;"	v
+commands_version_flat	./build/docs.gl/glsl.py	/^commands_version_flat = {}$/;"	v
+commands_version_flat	./build/docs.gl/opengl.py	/^commands_version_flat = {}$/;"	v
+comments	./build/docs.gl/compile.py	/^    comments = ""$/;"	v
+content	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ content: "<span style='color:#ff5555' >Command Not Found<\/span>" });$/;"	p	variable:anonymousObject39130a1d0e05
+create_directory	./build/docs.gl/compile.py	/^def create_directory(dir):$/;"	f
+credits	./build/docs.gl/html/footer.html	/^<div id="credits"><a href="https:\/\/docs.gl\/">docs.gl<\/a> was written by <a href="https:\/\/t/;"	I
+current_command_list	./build/docs.gl/read_glsl_spec.py	/^current_command_list = []$/;"	v
+current_command_list	./build/docs.gl/read_spec.py	/^      current_command_list = []$/;"	v
+current_command_list	./build/docs.gl/read_spec.py	/^current_command_list = []$/;"	v
+d	./build/docs.gl/compile.py	/^d = []$/;"	v
+dark-toggle	./build/docs.gl/html/index.html	/^					<a id="light-toggle" href="#">Light<\/a> | <a id="dark-toggle" href="#">Dark<\/a>$/;"	I
+dd	./build/docs.gl/html/style.css	/^dd {$/;"	s
+dd	./build/docs.gl/html/style.css	/^dl, dt, dd, ol, ul, li,$/;"	s
+del	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+details	./build/docs.gl/html/style.css	/^article, aside, canvas, details, embed,$/;"	s
+details	./build/docs.gl/html/style.css	/^article, aside, details, figcaption, figure,$/;"	s
+dfn	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+dictionary	./code/index/index.go	/^	dictionary map[string][]posting$/;"	m	struct:index.index	typeref:typename:map[string][]posting
+dirname	./build/docs.gl/compile.py	/^      dirname = os.path.dirname(path)$/;"	v
+dirpath	./build/docs.gl/compile.py	/^  dirpath = dirpath[10:]$/;"	v
+div	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+dl	./build/docs.gl/html/style.css	/^dl {$/;"	s
+dl	./build/docs.gl/html/style.css	/^dl, dt, dd, ol, ul, li,$/;"	s
+docs.GL	./build/docs.gl/html/copy/about.html	/^			<h1 class="logo">docs.<span class="thicken">GL<\/span><\/h1>$/;"	h
+docs.GL	./build/docs.gl/html/header.html	/^        <a href="\/"><h1 class="header-logo">docs.<span class="thicken">GL<\/span><\/h1><\/a>$/;"	h
+docs.GL	./build/docs.gl/html/index.html	/^			<h1 class="logo">docs.<span class="thicken">GL<\/span><\/h1>$/;"	h
+docs.gl	./build/docs.gl/html/index.html	/^	<title>docs.gl<\/title>$/;"	j
+docs.gl	./build/docs.gl/readme.md	/^docs.gl$/;"	c
+document	./code/index/index.go	/^type document struct {$/;"	s	package:index
+documentID	./code/index/index.go	/^	documentID   uint32$/;"	m	struct:index.document	typeref:typename:uint32
+documentID	./code/index/index.go	/^	documentID uint32$/;"	m	struct:index.posting	typeref:typename:uint32
+documentName	./code/index/index.go	/^	documentName string$/;"	m	struct:index.document	typeref:typename:string
+documentName	./code/index/index_test.go	/^	documentName string$/;"	m	struct:index.expectedPosition	typeref:typename:string
+documents	./code/index/index.go	/^	documents  []document$/;"	m	struct:index.index	typeref:typename:[]document
+dt	./build/docs.gl/html/style.css	/^dl, dt, dd, ol, ul, li,$/;"	s
+dt	./build/docs.gl/html/style.css	/^dt {$/;"	s
+duration	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ hide: { duration: 1000  } });$/;"	p	property:anonymousObject39130a1d1005.hide
+duration	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ show: { duration: 100  } });$/;"	p	property:anonymousObject39130a1d0f05.show
+editlink	./build/docs.gl/compile.py	/^    editlink = "https:\/\/github.com\/BSVino\/docs.gl\/blob\/mainline\/" + version + "\/" + comm/;"	v
+em	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+em	./build/docs.gl/html/style.css	/^em {$/;"	s
+embed	./build/docs.gl/html/style.css	/^article, aside, canvas, details, embed,$/;"	s
+es	./build/docs.gl/compile.py	/^        es = "ES "$/;"	v
+es	./build/docs.gl/compile.py	/^      es = ""$/;"	v
+es	./build/docs.gl/compile.py	/^      es = "ES "$/;"	v
+es	./build/docs.gl/compile.py	/^    es = ""$/;"	v
+eventErrorInvalidEndOfFile	./code/parser/htmlparser.go	/^	eventErrorInvalidEndOfFile  = errors.New("Invalid end of file")$/;"	v	package:parser
+eventErrorInvalidNewLine	./code/parser/htmlparser.go	/^	eventErrorInvalidNewLine    = errors.New("Invalid new line")$/;"	v	package:parser
+eventErrorInvalidTag	./code/parser/htmlparser.go	/^	eventErrorInvalidTag        = errors.New("Invalid tag")$/;"	v	package:parser
+eventErrorInvalidWhiteSpace	./code/parser/htmlparser.go	/^	eventErrorInvalidWhiteSpace = errors.New("Invalid whitespace")$/;"	v	package:parser
+eventType	./code/parser/htmlparser.go	/^type eventType int$/;"	t	package:parser	typeref:typename:int
+everything	./build/docs.gl/html/header.html	/^  <div id="everything">$/;"	I
+example_functions	./build/docs.gl/compile.py	/^        example_functions = glsl.example_functions$/;"	v
+example_functions	./build/docs.gl/compile.py	/^        example_functions = opengl.example_functions$/;"	v
+example_functions	./build/docs.gl/compile.py	/^    example_functions ={}$/;"	v
+example_functions	./build/docs.gl/glsl.py	/^example_functions = {}$/;"	v
+example_functions	./build/docs.gl/opengl.py	/^example_functions = {}$/;"	v
+examples	./build/docs.gl/compile.py	/^      examples = "<div class='refsect1' id='examples'><h2>Examples<\/h2>"$/;"	v
+examples	./build/docs.gl/glsl.py	/^examples = {}$/;"	v
+examples	./build/docs.gl/opengl.py	/^examples = {$/;"	v
+examples_done	./build/docs.gl/compile.py	/^      examples_done = []$/;"	v
+examples_html	./build/docs.gl/compile.py	/^      examples_html = examples$/;"	v
+examples_html	./build/docs.gl/compile.py	/^    examples_html = ""$/;"	v
+expectedPosition	./code/index/index_test.go	/^type expectedPosition struct {$/;"	s	package:index
+extensions	./build/docs.gl/read_spec.py	/^extensions = [$/;"	v
+extensions_map	./build/docs.gl/start_offline_webserver.py	/^    extensions_map = http.server.SimpleHTTPRequestHandler.extensions_map.copy()$/;"	v	class:Handler
+f	./build/docs.gl/compile.py	/^f = []$/;"	v
+fieldset	./build/docs.gl/html/style.css	/^fieldset, form, label, legend,$/;"	s
+figcaption	./build/docs.gl/html/style.css	/^article, aside, details, figcaption, figure,$/;"	s
+figcaption	./build/docs.gl/html/style.css	/^figure, figcaption, footer, header, hgroup,$/;"	s
+figure	./build/docs.gl/html/style.css	/^article, aside, details, figcaption, figure,$/;"	s
+figure	./build/docs.gl/html/style.css	/^figure, figcaption, footer, header, hgroup,$/;"	s
+find_command_file	./build/docs.gl/shared.py	/^def find_command_file(gl_version, command):$/;"	f
+find_command_file	./build/docs.gl/shared_glsl.py	/^def find_command_file(gl_version, command):$/;"	f
+footer	./build/docs.gl/compile.py	/^footer = footer.replace("{$gentime}", time.strftime("%d %B %Y at %H:%M:%S GMT", time.gmtime()));$/;"	v
+footer	./build/docs.gl/compile.py	/^footer = footer_fp.read()$/;"	v
+footer	./build/docs.gl/html/footer.html	/^<div id="footer">$/;"	I
+footer	./build/docs.gl/html/style.css	/^figure, figcaption, footer, header, hgroup,$/;"	s
+footer	./build/docs.gl/html/style.css	/^footer, header, hgroup, menu, nav, section {$/;"	s
+footer_for_command	./build/docs.gl/compile.py	/^    footer_for_command = footer_for_command.replace("{$comments}", comments)$/;"	v
+footer_for_command	./build/docs.gl/compile.py	/^    footer_for_command = footer_for_command.replace("{$improvepage}", improvepage)$/;"	v
+footer_for_command	./build/docs.gl/compile.py	/^    footer_for_command = footer_for_version$/;"	v
+footer_for_page	./build/docs.gl/compile.py	/^    footer_for_page = footer_for_page.replace("{$improvepage}", "")$/;"	v
+footer_for_page	./build/docs.gl/compile.py	/^    footer_for_page = footer_for_version$/;"	v
+footer_for_version	./build/docs.gl/compile.py	/^  footer_for_version = footer;$/;"	v
+footer_fp	./build/docs.gl/compile.py	/^footer_fp = open("html\/footer.html")$/;"	v
+form	./build/docs.gl/html/style.css	/^fieldset, form, label, legend,$/;"	s
+fp	./build/docs.gl/compile.py	/^    fp = open("html\/404.html")$/;"	v
+freq	./code/index/index.go	/^	freq       uint32$/;"	m	struct:index.posting	typeref:typename:uint32
+frontsearch	./build/docs.gl/html/index.html	/^			<input id="frontsearch" size=50 autofocus \/>$/;"	I
+function_aliases	./build/docs.gl/glsl.py	/^function_aliases = {}$/;"	v
+function_aliases	./build/docs.gl/opengl.py	/^function_aliases = {}$/;"	v
+generate_versions	./build/docs.gl/glsl.py	/^def generate_versions():$/;"	f
+generate_versions	./build/docs.gl/opengl.py	/^def generate_versions():$/;"	f
+get_el_versions	./build/docs.gl/read_glsl_spec.py	/^def get_el_versions( path_file ):$/;"	f
+get_glsl_docs	./build/docs.gl/find_glsl.py	/^def get_glsl_docs( filenames, foldername ):$/;"	f
+get_major_versions	./build/docs.gl/glsl.py	/^def get_major_versions(all_versions):$/;"	f
+get_major_versions	./build/docs.gl/opengl.py	/^def get_major_versions(all_versions):$/;"	f
+get_major_versions_available	./build/docs.gl/glsl.py	/^def get_major_versions_available(command):$/;"	f
+get_major_versions_available	./build/docs.gl/opengl.py	/^def get_major_versions_available(command):$/;"	f
+get_versions	./build/docs.gl/read_glsl_spec.py	/^def get_versions( path_file ):$/;"	f
+gl_major_version	./build/docs.gl/read_spec.py	/^    gl_major_version = feature.attrib['number'][0]$/;"	v
+gl_prefix	./build/docs.gl/read_spec.py	/^      gl_prefix = 'es'$/;"	v
+gl_prefix	./build/docs.gl/read_spec.py	/^    gl_prefix = 'gl'$/;"	v
+gl_printable_name	./build/docs.gl/html/copy/docs.gl.js	/^function gl_printable_name(name) {$/;"	f
+gldir	./build/docs.gl/read_spec.py	/^      gldir = gl_prefix + gl_major_version$/;"	v
+gles	./build/docs.gl/read_spec.py	/^    gles = feature.attrib['api'][0:4] == 'gles'$/;"	v
+glroot	./build/docs.gl/read_glsl_spec.py	/^glroot = gltree.getroot()$/;"	v
+glroot	./build/docs.gl/read_spec.py	/^glroot = gltree.getroot()$/;"	v
+glsl_all_versions	./build/docs.gl/compile.py	/^  glsl_all_versions = list(glsl.version_commands.keys())$/;"	v
+glsl_api_commands	./build/docs.gl/compile.py	/^    glsl_api_commands = ""$/;"	v
+glsl_api_commands	./build/docs.gl/compile.py	/^    glsl_api_commands =""$/;"	v
+glsl_command_categories	./build/docs.gl/html/header.html	/^      <ul id="glsl_command_categories">{$glsl_api_commands}<\/ul>$/;"	I
+glsl_index_commands_version	./build/docs.gl/compile.py	/^glsl_index_commands_version = sorted(glsl.commands_version_flat.keys())$/;"	v
+glsl_index_versions_commands	./build/docs.gl/compile.py	/^glsl_index_versions_commands = ""$/;"	v
+glsl_major_versions	./build/docs.gl/compile.py	/^glsl_major_versions = glsl.get_major_versions(glsl.version_commands.keys())$/;"	v
+glsl_search_function_aliases	./build/docs.gl/compile.py	/^glsl_search_function_aliases = {}$/;"	v
+glsl_search_versions_commands	./build/docs.gl/compile.py	/^glsl_search_versions_commands = ""$/;"	v
+glsl_unhandled_commands	./build/docs.gl/compile.py	/^glsl_unhandled_commands = list(glsl.commands_version_flat.keys())$/;"	v
+glsl_version_numbers	./build/docs.gl/compile.py	/^glsl_version_numbers = glsl.version_commands.keys()$/;"	v
+gltree	./build/docs.gl/read_glsl_spec.py	/^gltree = ET.parse('specs\/glsl.xml')$/;"	v
+gltree	./build/docs.gl/read_spec.py	/^gltree = ET.parse('specs\/gl.xml')$/;"	v
+h1	./build/docs.gl/html/style.css	/^h1 {$/;"	s
+h1	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6 {$/;"	s
+h1	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+h2	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6 {$/;"	s
+h2	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+h2	./build/docs.gl/html/style.css	/^h2 {$/;"	s
+h3	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6 {$/;"	s
+h3	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+h3	./build/docs.gl/html/style.css	/^h3 {$/;"	s
+h4	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6 {$/;"	s
+h4	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+h4	./build/docs.gl/html/style.css	/^h4 {$/;"	s
+h5	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6 {$/;"	s
+h5	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+h5	./build/docs.gl/html/style.css	/^h5 {$/;"	s
+h6	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6 {$/;"	s
+h6	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+h6	./build/docs.gl/html/style.css	/^h6 {$/;"	s
+header	./build/docs.gl/compile.py	/^header = header.replace("{$search_versions}", search_versions_options)$/;"	v
+header	./build/docs.gl/compile.py	/^header = header_fp.read()$/;"	v
+header	./build/docs.gl/compile.py	/^header = replace_js(header, prefix="..\/")$/;"	v
+header	./build/docs.gl/html/style.css	/^figure, figcaption, footer, header, hgroup,$/;"	s
+header	./build/docs.gl/html/style.css	/^footer, header, hgroup, menu, nav, section {$/;"	s
+header_for_command	./build/docs.gl/compile.py	/^    header_for_command = header_for_command.replace("{$api_commands}", api_commands)$/;"	v
+header_for_command	./build/docs.gl/compile.py	/^    header_for_command = header_for_command.replace("{$command_versions}", command_versions)$/;"	v
+header_for_command	./build/docs.gl/compile.py	/^    header_for_command = header_for_command.replace("{$command}", command)$/;"	v
+header_for_command	./build/docs.gl/compile.py	/^    header_for_command = header_for_command.replace("{$current_api}", latest_version.replace("."/;"	v
+header_for_command	./build/docs.gl/compile.py	/^    header_for_command = header_for_command.replace("{$glsl_api_commands}", glsl_api_commands)$/;"	v
+header_for_command	./build/docs.gl/compile.py	/^    header_for_command = header_for_version$/;"	v
+header_for_page	./build/docs.gl/compile.py	/^    header_for_page = header_for_page.replace("{$api_commands}", api_commands)$/;"	v
+header_for_page	./build/docs.gl/compile.py	/^    header_for_page = header_for_page.replace("{$command_versions}", "")$/;"	v
+header_for_page	./build/docs.gl/compile.py	/^    header_for_page = header_for_page.replace("{$command}", "Oops! Can't find '<span id='404comm/;"	v
+header_for_page	./build/docs.gl/compile.py	/^    header_for_page = header_for_page.replace("{$current_api}", latest_minor.replace(".", ""))$/;"	v
+header_for_page	./build/docs.gl/compile.py	/^    header_for_page = header_for_page.replace("{$glsl_api_commands}", glsl_api_commands)$/;"	v
+header_for_page	./build/docs.gl/compile.py	/^    header_for_page = header_for_version$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^    header_for_version = header_for_version.replace("{$api_name}", "GLSL ES")$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^    header_for_version = header_for_version.replace("{$api_name}", "GLSL")$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^    header_for_version = header_for_version.replace("{$api_name}", "OpenGL ES")$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^    header_for_version = header_for_version.replace("{$api_name}", "OpenGL")$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^  header_for_version = header;$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^  header_for_version = header_for_version.replace("{$command_major_version}", version[2])$/;"	v
+header_for_version	./build/docs.gl/compile.py	/^  header_for_version = header_for_version.replace("{$versions_options}", toc_versions_options)$/;"	v
+header_fp	./build/docs.gl/compile.py	/^header_fp = open("html\/header.html")$/;"	v
+hgroup	./build/docs.gl/html/style.css	/^figure, figcaption, footer, header, hgroup,$/;"	s
+hgroup	./build/docs.gl/html/style.css	/^footer, header, hgroup, menu, nav, section {$/;"	s
+hide	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ hide: { duration: 1000  } });$/;"	p	variable:anonymousObject39130a1d1005
+hide_commands	./build/docs.gl/html/copy/docs.gl.js	/^		hide_commands = function() {$/;"	f	function:set_api_version
+hide_deprecated	./build/docs.gl/html/header.html	/^      <input id="hide_deprecated" type="checkbox"> <label id="hide_label" for="hide_deprecated">/;"	I
+hide_label	./build/docs.gl/html/header.html	/^      <input id="hide_deprecated" type="checkbox"> <label id="hide_label" for="hide_deprecated">/;"	I
+hide_tooltip	./build/docs.gl/html/copy/docs.gl.js	/^	function hide_tooltip (){$/;"	f	function:anonymousFunction39130a1d0500
+host	./build/docs.gl/start_offline_webserver.py	/^host = "localhost"$/;"	v
+html	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+httpd	./build/docs.gl/server.py	/^httpd = socketserver.TCPServer(("", PORT), Handler)$/;"	v
+i	./build/docs.gl/html/style.css	/^b, u, i, center,$/;"	s
+iframe	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+ignorePunctuation	./code/text/normalize.go	/^var ignorePunctuation = map[rune]bool{$/;"	v	package:text
+img	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+improvepage	./build/docs.gl/compile.py	/^    improvepage = "Think you can improve this page? <a href='" + editlink + "'>Edit this page<\//;"	v
+improvepage	./build/docs.gl/html/footer.html	/^<div id="improvepage">{$improvepage}<\/div>$/;"	I
+included_commands	./build/docs.gl/compile.py	/^  included_commands = []$/;"	v
+index	./build/docs.gl/compile.py	/^index = index.replace("{$commandlist}", index_versions_commands+glsl_index_versions_commands)$/;"	v
+index	./build/docs.gl/compile.py	/^index = index_fp.read()$/;"	v
+index	./build/docs.gl/compile.py	/^index = replace_js(index, prefix=".\/")$/;"	v
 index	./code/index/index.go	/^package index$/;"	p
-line	./code/index/htmlparser.go	/^	line  uint64$/;"	m	struct:index.fileReader	typeref:typename:uint64
+index	./code/index/index.go	/^type index struct {$/;"	s	package:index
+index	./code/index/index_test.go	/^package index$/;"	p
+index_commands_version	./build/docs.gl/compile.py	/^index_commands_version = sorted(opengl.commands_version_flat.keys())$/;"	v
+index_fp	./build/docs.gl/compile.py	/^index_fp = open(index_path)$/;"	v
+index_fp	./build/docs.gl/compile.py	/^index_fp = open(output_dir + "\/index.html", "w")$/;"	v
+index_path	./build/docs.gl/compile.py	/^index_path = "html\/index.html"$/;"	v
+index_versions_commands	./build/docs.gl/compile.py	/^index_versions_commands = ""$/;"	v
+input.ui-button	./build/docs.gl/html/copy/jquery-ui.css	/^input.ui-button {$/;"	c
+input.ui-button::-moz-focus-inner	./build/docs.gl/html/copy/jquery-ui.css	/^input.ui-button::-moz-focus-inner,$/;"	c
+ins	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+insert_additional	./build/docs.gl/insert_additional.py	/^def insert_additional(folder):$/;"	f
+kbd	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+khronos	./build/docs.gl/html/header.html	/^    <div id="khronos">$/;"	I
+label	./build/docs.gl/html/style.css	/^fieldset, form, label, legend,$/;"	s
+last_api	./build/docs.gl/read_spec.py	/^      last_api = feature.attrib['api']$/;"	v
+last_api	./build/docs.gl/read_spec.py	/^last_api = ""$/;"	v
+latest_minor	./build/docs.gl/compile.py	/^      latest_minor = version_option$/;"	v
+latest_minor	./build/docs.gl/compile.py	/^  latest_minor = version[:3] + ".0"$/;"	v
+latest_version	./build/docs.gl/compile.py	/^        latest_version = version_option$/;"	v
+latest_version	./build/docs.gl/compile.py	/^      latest_version = version$/;"	v
+latest_version	./build/docs.gl/compile.py	/^    latest_version = version[:3] + ".0"$/;"	v
+latest_version	./build/docs.gl/compile.py	/^  latest_version = ''$/;"	v
+legend	./build/docs.gl/html/style.css	/^fieldset, form, label, legend,$/;"	s
+li	./build/docs.gl/html/style.css	/^dl, dt, dd, ol, ul, li,$/;"	s
+li	./build/docs.gl/html/style.css	/^li {$/;"	s
+light-toggle	./build/docs.gl/html/index.html	/^					<a id="light-toggle" href="#">Light<\/a> | <a id="dark-toggle" href="#">Dark<\/a>$/;"	I
+link_class	./build/docs.gl/compile.py	/^        link_class = "class='current'"$/;"	v
+link_class	./build/docs.gl/compile.py	/^      link_class = ""$/;"	v
 main	./code/main.go	/^func main() {$/;"	f	package:main
 main	./code/main.go	/^package main$/;"	p
-newFileReader	./code/index/htmlparser.go	/^func newFileReader(file *os.File) *fileReader {$/;"	f	package:index	typeref:typename:*fileReader
-parseHTMLFile	./code/index/htmlparser.go	/^func parseHTMLFile(file *os.File) func(*parserEvent) {$/;"	f	package:index	typeref:typename:func(*parserEvent)
-parserEvent	./code/index/htmlparser.go	/^type parserEvent struct {$/;"	s	package:index
-parserState	./code/index/htmlparser.go	/^type parserState byte$/;"	t	package:index	typeref:typename:byte
-parserStateAttributeKey	./code/index/htmlparser.go	/^	parserStateAttributeKey$/;"	c	package:index
-parserStateAttributeValue	./code/index/htmlparser.go	/^	parserStateAttributeValue$/;"	c	package:index
-parserStateOpeningTag	./code/index/htmlparser.go	/^	parserStateOpeningTag parserState = iota$/;"	c	package:index	typeref:type:parserState
-parserStateUnknown	./code/index/htmlparser.go	/^	parserStateUnknown$/;"	c	package:index
-readLowerCase	./code/index/htmlparser.go	/^func (reader *fileReader) readLowerCase(skipWhiteSpace bool, consumeFirstCharacter bool) (byte, /;"	f	struct:index.fileReader	typeref:typename:(byte, int)
-skipWhiteSpace	./code/index/htmlparser.go	/^	skipWhiteSpace            = true$/;"	c	package:index
+major_versions	./build/docs.gl/compile.py	/^  major_versions = glsl.get_major_versions(glsl.commands_version[command])$/;"	v
+major_versions	./build/docs.gl/compile.py	/^  major_versions = glsl.get_major_versions(glsl.commands_version_flat[command])$/;"	v
+major_versions	./build/docs.gl/compile.py	/^  major_versions = glsl.get_major_versions_available(command)$/;"	v
+major_versions	./build/docs.gl/compile.py	/^  major_versions = opengl.get_major_versions(opengl.commands_version[command])$/;"	v
+major_versions	./build/docs.gl/compile.py	/^  major_versions = opengl.get_major_versions(opengl.commands_version_flat[command])$/;"	v
+major_versions	./build/docs.gl/compile.py	/^  major_versions = opengl.get_major_versions_available(command)$/;"	v
+major_versions	./build/docs.gl/compile.py	/^major_versions = opengl.get_major_versions(opengl.version_commands.keys())$/;"	v
+make_copyright	./build/docs.gl/make_copyright.py	/^def make_copyright(folder):$/;"	f
+make_glsl_docs	./build/docs.gl/find_glsl.py	/^def make_glsl_docs():$/;"	f
+mark	./build/docs.gl/html/style.css	/^time, mark, audio, video {$/;"	s
+mediastyle	./build/docs.gl/html/index.html	/^	<link id="mediastyle" href="media.css" rel="stylesheet" type="text\/css" \/>$/;"	I
+menu	./build/docs.gl/html/style.css	/^footer, header, hgroup, menu, nav, section {$/;"	s
+menu	./build/docs.gl/html/style.css	/^menu, nav, output, ruby, section, summary,$/;"	s
+minLength	./build/docs.gl/html/copy/docs.gl.js	/^		minLength: 3,$/;"	p	variable:anonymousObject39130a1d1205
+moz	./build/docs.gl/html/copy/opensearch.xml	/^						xmlns:moz="http:\/\/www.mozilla.org\/2006\/browser\/search\/">$/;"	n	uri:http://www.mozilla.org/2006/browser/search/
+mstring	./build/docs.gl/read_glsl_spec.py	/^    mstring = mstring.replace("{" , "")$/;"	v
+mstring	./build/docs.gl/read_glsl_spec.py	/^    mstring = mstring.replace("}" , "")$/;"	v
+mstring	./build/docs.gl/read_glsl_spec.py	/^    mstring = str(x)$/;"	v
+n	./rename_files.bat	/^set n=1$/;"	v
+nav	./build/docs.gl/html/style.css	/^footer, header, hgroup, menu, nav, section {$/;"	s
+nav	./build/docs.gl/html/style.css	/^menu, nav, output, ruby, section, summary,$/;"	s
+notfound_html	./build/docs.gl/compile.py	/^      notfound_html = notfound_html$/;"	v
+notfound_html	./build/docs.gl/compile.py	/^    notfound_html = fp.read()$/;"	v
+ns4c51da6f0101	./build/docs.gl/html/copy/opensearch.xml	/^						xmlns:moz="http:\/\/www.mozilla.org\/2006\/browser\/search\/">$/;"	n	uri:http://a9.com/-/spec/opensearch/1.1/
+object	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+ol	./build/docs.gl/html/style.css	/^dl, dt, dd, ol, ul, li,$/;"	s
+ol	./build/docs.gl/html/style.css	/^ol, ul {$/;"	s
+output	./build/docs.gl/compile.py	/^    output = open(output_dir + version + "\/404", "w")$/;"	v
+output	./build/docs.gl/html/style.css	/^menu, nav, output, ruby, section, summary,$/;"	s
+output	./build/docs.gl/read_glsl_spec.py	/^output = open("glsl_spec.py", "w")$/;"	v
+output	./build/docs.gl/read_spec.py	/^output = open("opengl_spec.py", "w")$/;"	v
+output_dir	./build/docs.gl/compile.py	/^output_dir = "htdocs\/"$/;"	v
+output_html	./build/docs.gl/compile.py	/^    output_html = header_for_command + command_html + footer_for_command$/;"	v
+output_html	./build/docs.gl/compile.py	/^    output_html = header_for_page + notfound_html + footer_for_page$/;"	v
+output_path	./build/docs.gl/compile.py	/^    output_path = output_dir + version_dir + "\/" + command$/;"	v
+output_string	./build/docs.gl/compile.py	/^          output_string = htmlmin.minify(output_html, remove_comments=True, reduce_boolean_attri/;"	v
+output_string	./build/docs.gl/compile.py	/^        output_string = output_html$/;"	v
+output_string	./build/docs.gl/compile.py	/^      output_string = htmlmin.minify(output_html, remove_comments=True, reduce_boolean_attribute/;"	v
+output_string	./build/docs.gl/compile.py	/^    output_string = output_html$/;"	v
+p	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+p	./build/docs.gl/html/style.css	/^p {$/;"	s
+pagenotfound	./build/docs.gl/html/404.html	/^		<div class="refentry" id="pagenotfound">$/;"	I
+pagestyle	./build/docs.gl/html/copy/about.html	/^<link id="pagestyle" href="style_light.css" rel="stylesheet" type="text\/css" \/>$/;"	I
+pagestyle	./build/docs.gl/html/header.html	/^  <link id="pagestyle" href="..\/style_light.css" rel="stylesheet" type="text\/css" \/>$/;"	I
+pagestyle	./build/docs.gl/html/index.html	/^	<link id="pagestyle" href="style_light.css" rel="stylesheet" type="text\/css" \/>$/;"	I
+parser	./build/docs.gl/compile.py	/^parser = argparse.ArgumentParser(description="Compile OpenGL documentation, generate a static we/;"	v
+parser	./code/parser/htmlparser.go	/^package parser$/;"	p
+parser	./code/parser/htmlparser_test.go	/^package parser$/;"	p
+parserState	./code/parser/htmlparser.go	/^type parserState byte$/;"	t	package:parser	typeref:typename:byte
+parserStateAttributeKey	./code/parser/htmlparser.go	/^	parserStateAttributeKey$/;"	c	package:parser
+parserStateAttributeValue	./code/parser/htmlparser.go	/^	parserStateAttributeValue$/;"	c	package:parser
+parserStateOpeningTag	./code/parser/htmlparser.go	/^	parserStateOpeningTag parserState = iota$/;"	c	package:parser	typeref:type:parserState
+parserStateUnknown	./code/parser/htmlparser.go	/^	parserStateUnknown$/;"	c	package:parser
+path	./build/docs.gl/compile.py	/^    path = 'html\/copy\/' + filename$/;"	v
+path	./build/docs.gl/find_glsl.py	/^path = os.path.dirname(os.path.abspath(__file__))$/;"	v
+path	./build/docs.gl/html/copy/docs.gl.js	/^		$.cookie("hide_deprecated", window.hide_deprecated, {path: '\/'});$/;"	p	variable:anonymousObject39130a1d1405
+path	./build/docs.gl/html/copy/docs.gl.js	/^		$.cookie("pagestyle", "dark", {path: '\/'});$/;"	p	variable:anonymousObject39130a1d0a05
+path	./build/docs.gl/html/copy/docs.gl.js	/^		$.cookie("pagestyle", "light", {path: '\/'});$/;"	p	variable:anonymousObject39130a1d0805
+path	./build/docs.gl/html/copy/docs.gl.js	/^	$.cookie("api_version", version, {path: '\/'});$/;"	p	variable:anonymousObject39130a1d0105
+path	./build/docs.gl/read_glsl_spec.py	/^path = os.path.dirname(os.path.abspath(__file__))$/;"	v
+path_file	./build/docs.gl/read_glsl_spec.py	/^    path_file = path+"\/"+api+"\/"+command_name+".xhtml"$/;"	v
+port	./build/docs.gl/start_offline_webserver.py	/^port = 8000$/;"	v
+positions	./code/index/index.go	/^	positions  []uint32$/;"	m	struct:index.posting	typeref:typename:[]uint32
+positions	./code/index/index_test.go	/^	positions    []uint32$/;"	m	struct:index.expectedPosition	typeref:typename:[]uint32
+posting	./code/index/index.go	/^type posting struct {$/;"	s	package:index
+pre	./build/docs.gl/html/style.css	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	s
+pre	./build/docs.gl/html/style.css	/^pre {$/;"	s
+q	./build/docs.gl/html/style.css	/^blockquote, q {$/;"	s
+q	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+q:after	./build/docs.gl/html/style.css	/^q:before, q:after {$/;"	s
+q:before	./build/docs.gl/html/style.css	/^q:before, q:after {$/;"	s
+replace_alias	./build/docs.gl/compile.py	/^        def replace_alias(matchobj):$/;"	f
+replace_js	./build/docs.gl/compile.py	/^def replace_js(markup, prefix):$/;"	f
+reverse_version_index	./build/docs.gl/glsl.py	/^def reverse_version_index(command_list):$/;"	f
+reverse_version_index	./build/docs.gl/opengl.py	/^def reverse_version_index(command_list):$/;"	f
+ruby	./build/docs.gl/html/style.css	/^menu, nav, output, ruby, section, summary,$/;"	s
+s	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+samp	./build/docs.gl/html/style.css	/^del, dfn, em, img, ins, kbd, q, s, samp,$/;"	s
+search	./build/docs.gl/compile.py	/^search = search.replace("{$search_versions_commands}", search_versions_commands)$/;"	v
+search	./build/docs.gl/compile.py	/^search = search_fp.read()$/;"	v
+search	./build/docs.gl/html/header.html	/^        <input id="search" placeholder="search" size="50" \/><input id="search_button" type="sub/;"	I
+search-container	./build/docs.gl/html/index.html	/^	<div id="search-container">$/;"	I
+search_button	./build/docs.gl/html/header.html	/^        <input id="search" placeholder="search" size="50" \/><input id="search_button" type="sub/;"	I
+search_fn	./build/docs.gl/html/copy/docs.gl.js	/^	search_fn = function(value) {$/;"	f	function:anonymousFunction39130a1d0500
+search_fp	./build/docs.gl/compile.py	/^search_fp = open("html\/docs.gl.search.js")$/;"	v
+search_fp	./build/docs.gl/compile.py	/^search_fp = open(output_dir + "\/docs.gl.search.js", "w")$/;"	v
+search_function_aliases	./build/docs.gl/compile.py	/^search_function_aliases = {}$/;"	v
+search_versions_commands	./build/docs.gl/compile.py	/^search_versions_commands = "var search_versions = {"$/;"	v
+search_versions_options	./build/docs.gl/compile.py	/^search_versions_options = ""$/;"	v
+section	./build/docs.gl/html/style.css	/^footer, header, hgroup, menu, nav, section {$/;"	s
+section	./build/docs.gl/html/style.css	/^menu, nav, output, ruby, section, summary,$/;"	s
+select	./build/docs.gl/html/copy/docs.gl.js	/^		select: function( event, ui ) {$/;"	m	variable:anonymousObject39130a1d1205
+selected	./build/docs.gl/compile.py	/^      selected = " selected='selected'"$/;"	v
+selected	./build/docs.gl/compile.py	/^    selected = ""$/;"	v
+set_api_version	./build/docs.gl/html/copy/docs.gl.js	/^function set_api_version(version) {$/;"	f
+show	./build/docs.gl/html/copy/docs.gl.js	/^			$("#search").tooltip({ show: { duration: 100  } });$/;"	p	variable:anonymousObject39130a1d0f05
+sl_extensions	./build/docs.gl/read_glsl_spec.py	/^sl_extensions =[$/;"	v
+small	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+source	./build/docs.gl/html/copy/docs.gl.js	/^		source: search_versions["all"],$/;"	p	variable:anonymousObject39130a1d1205
+span	./build/docs.gl/html/style.css	/^html, body, div, span, applet, object, iframe,$/;"	s
+spew_category	./build/docs.gl/compile.py	/^def spew_category(name, commands, current_command, api):$/;"	f
+stored_version_commands	./build/docs.gl/read_glsl_spec.py	/^stored_version_commands = { '' : [ {'':''} ,] }$/;"	v
+strike	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+strip_es1	./build/docs.gl/strip.py	/^def strip_es1():$/;"	f
+strip_es2	./build/docs.gl/strip.py	/^def strip_es2():$/;"	f
+strip_es3	./build/docs.gl/strip.py	/^def strip_es3():$/;"	f
+strip_gl2	./build/docs.gl/strip.py	/^def strip_gl2():$/;"	f
+strip_gl3	./build/docs.gl/strip.py	/^def strip_gl3():$/;"	f
+strip_gl4	./build/docs.gl/strip.py	/^def strip_gl4():$/;"	f
+strong	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+strong	./build/docs.gl/html/style.css	/^strong {$/;"	s
+style	./build/docs.gl/compile.py	/^  style = style.replace(template, url)$/;"	v
+style	./build/docs.gl/compile.py	/^style = style_fp.read()$/;"	v
+style_dark	./build/docs.gl/html/header.html	/^    <div class="toggle-container"><a href="#" id="style_light">Light<\/a> | <a href="#" id="styl/;"	I
+style_fp	./build/docs.gl/compile.py	/^style_fp = open("html\/style.css")$/;"	v
+style_fp	./build/docs.gl/compile.py	/^style_fp = open(output_dir + "\/style.css", "w")$/;"	v
+style_light	./build/docs.gl/html/header.html	/^    <div class="toggle-container"><a href="#" id="style_light">Light<\/a> | <a href="#" id="styl/;"	I
+sub	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+summary	./build/docs.gl/html/style.css	/^menu, nav, output, ruby, section, summary,$/;"	s
+sup	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+support_API	./build/docs.gl/read_glsl_spec.py	/^support_API = {'el3' , 'sl4' }$/;"	v
+table	./build/docs.gl/html/style.css	/^table {$/;"	s
+table	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+tbody	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+td	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+template	./build/docs.gl/compile.py	/^  template = "{$" + name + "}"$/;"	v
+test_extensions	./build/docs.gl/read_glsl_spec.py	/^def test_extensions(gldir, command):$/;"	f
+test_extensions	./build/docs.gl/read_spec.py	/^def test_extensions(gldir, command):$/;"	f
+test_replacements	./build/docs.gl/read_glsl_spec.py	/^def test_replacements(gldir, command):$/;"	f
+test_replacements	./build/docs.gl/read_spec.py	/^def test_replacements(gldir, command):$/;"	f
+text	./code/text/normalize.go	/^package text$/;"	p
+text	./code/text/stem.go	/^package text$/;"	p
+text	./code/text/text_test.go	/^package text$/;"	p
+tfoot	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+th	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+thead	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+time	./build/docs.gl/html/style.css	/^time, mark, audio, video {$/;"	s
+toc	./build/docs.gl/html/header.html	/^    <div id="toc">$/;"	I
+toc_versions_options	./build/docs.gl/compile.py	/^  toc_versions_options =  toc_versions_options_gl + toc_versions_options_es + toc_versions_optio/;"	v
+toc_versions_options	./build/docs.gl/compile.py	/^  toc_versions_options = ""$/;"	v
+toc_versions_options_el	./build/docs.gl/compile.py	/^      toc_versions_options_el = toc_versions_options_el + "<option class='versions_option' value/;"	v
+toc_versions_options_el	./build/docs.gl/compile.py	/^  toc_versions_options_el = ""$/;"	v
+toc_versions_options_es	./build/docs.gl/compile.py	/^      toc_versions_options_es = toc_versions_options_es + "<option class='versions_option' value/;"	v
+toc_versions_options_es	./build/docs.gl/compile.py	/^  toc_versions_options_es = ""$/;"	v
+toc_versions_options_gl	./build/docs.gl/compile.py	/^      toc_versions_options_gl = toc_versions_options_gl + "<option class='versions_option' value/;"	v
+toc_versions_options_gl	./build/docs.gl/compile.py	/^  toc_versions_options_gl = ""$/;"	v
+toc_versions_options_sl	./build/docs.gl/compile.py	/^      toc_versions_options_sl = toc_versions_options_sl + "<option class='versions_option' value/;"	v
+toc_versions_options_sl	./build/docs.gl/compile.py	/^  toc_versions_options_sl = ""$/;"	v
+tr	./build/docs.gl/html/style.css	/^table, caption, tbody, tfoot, thead, tr, th, td,$/;"	s
+tt	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+tutorial_functions	./build/docs.gl/compile.py	/^        tutorial_functions = glsl.tutorial_functions$/;"	v
+tutorial_functions	./build/docs.gl/compile.py	/^        tutorial_functions = opengl.tutorial_functions$/;"	v
+tutorial_functions	./build/docs.gl/compile.py	/^    tutorial_functions={}  $/;"	v
+tutorial_functions	./build/docs.gl/glsl.py	/^tutorial_functions = {}$/;"	v
+tutorial_functions	./build/docs.gl/opengl.py	/^tutorial_functions = {}$/;"	v
+tutorial_list	./build/docs.gl/compile.py	/^        tutorial_list = glsl.tutorial_functions[command]$/;"	v
+tutorial_list	./build/docs.gl/compile.py	/^        tutorial_list = opengl.tutorial_functions[command]$/;"	v
+tutorial_list	./build/docs.gl/compile.py	/^        tutorial_list = sorted(tutorial_list, key=lambda tutorial: glsl.tutorials[tutorial['tuto/;"	v
+tutorial_list	./build/docs.gl/compile.py	/^        tutorial_list = sorted(tutorial_list, key=lambda tutorial: opengl.tutorials[tutorial['tu/;"	v
+tutorial_list	./build/docs.gl/compile.py	/^      tutorial_list={}$/;"	v
+tutorials	./build/docs.gl/compile.py	/^      tutorials = "<div class='refsect1' id='tutorials'><h2>Tutorials<\/h2><p>"$/;"	v
+tutorials	./build/docs.gl/glsl.py	/^tutorials = {}$/;"	v
+tutorials	./build/docs.gl/opengl.py	/^tutorials = {$/;"	v
+tutorials_done	./build/docs.gl/compile.py	/^      tutorials_done = []$/;"	v
+u	./build/docs.gl/html/style.css	/^b, u, i, center,$/;"	s
+ul	./build/docs.gl/html/style.css	/^dl, dt, dd, ol, ul, li,$/;"	s
+ul	./build/docs.gl/html/style.css	/^ol, ul {$/;"	s
+unhandled_commands	./build/docs.gl/compile.py	/^unhandled_commands = list(opengl.commands_version_flat.keys())$/;"	v
+url	./build/docs.gl/compile.py	/^      url = url + filename + (suffix or '')$/;"	v
+url	./build/docs.gl/compile.py	/^    url = ".\/" + filename$/;"	v
+var	./build/docs.gl/html/style.css	/^small, strike, strong, sub, sup, tt, var,$/;"	s
+version	./build/docs.gl/compile.py	/^      version = version.replace(".", "")$/;"	v
+version	./build/docs.gl/compile.py	/^    version = version.replace(".", "")$/;"	v
+version-select	./build/docs.gl/html/index.html	/^			<select id="version-select">$/;"	I
+version_check	./build/docs.gl/read_glsl_spec.py	/^version_check = ['','sl1.10' , 'sl1.20' , 'sl1.30' , 'sl1.40' , 'sl1.50' , 'sl3.30' , 'sl4.00' ,/;"	v
+version_check_el	./build/docs.gl/read_glsl_spec.py	/^version_check_el = ['','el1.10' , 'el3.00' , 'el3.10' ]  $/;"	v
+version_commands	./build/docs.gl/glsl.py	/^version_commands = {}$/;"	v
+version_commands	./build/docs.gl/glsl_spec.py	/^version_commands = {$/;"	v
+version_commands	./build/docs.gl/opengl.py	/^version_commands = {}$/;"	v
+version_commands	./build/docs.gl/opengl_spec.py	/^version_commands = {$/;"	v
+version_commands_flat	./build/docs.gl/glsl.py	/^version_commands_flat = {}$/;"	v
+version_commands_flat	./build/docs.gl/opengl.py	/^version_commands_flat = {}$/;"	v
+version_dir	./build/docs.gl/compile.py	/^    version_dir = version$/;"	v
+version_numbers	./build/docs.gl/compile.py	/^version_numbers = opengl.version_commands.keys()$/;"	v
+versions	./build/docs.gl/read_glsl_spec.py	/^              versions = get_el_versions(path+"\/"+api+"\/"+command_docs+".xhtml")$/;"	v
+versions	./build/docs.gl/read_glsl_spec.py	/^              versions = get_versions(path+"\/"+api+"\/"+command_docs+".xhtml")$/;"	v
+versions	./build/docs.gl/read_glsl_spec.py	/^            versions = []$/;"	v
+versions	./build/docs.gl/read_glsl_spec.py	/^        versions = get_el_versions(path_file)$/;"	v
+versions	./build/docs.gl/read_glsl_spec.py	/^        versions = get_versions(path_file)$/;"	v
+versions	./build/docs.gl/read_glsl_spec.py	/^      versions = []$/;"	v
+versions_added	./build/docs.gl/compile.py	/^  versions_added = []$/;"	v
+versions_container	./build/docs.gl/html/header.html	/^      <div id="versions_container">$/;"	I
+versions_dropdown	./build/docs.gl/html/header.html	/^        <select id="versions_dropdown">{$versions_options}<\/select>$/;"	I
+video	./build/docs.gl/html/style.css	/^time, mark, audio, video {$/;"	s
+width	./build/docs.gl/html/copy/docs.gl.js	/^		width: 150$/;"	p	variable:anonymousObject39130a1d0605
+written	./build/docs.gl/compile.py	/^  written = 0$/;"	v
+{$command}	./build/docs.gl/html/header.html	/^      <h1 id="command_title">{$command}<\/h1>$/;"	h
+{$command} - {$api_name} {$command_major_version} - docs.gl	./build/docs.gl/html/header.html	/^  <title>{$command} - {$api_name} {$command_major_version} - docs.gl<\/title>$/;"	j

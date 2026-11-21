@@ -1,17 +1,20 @@
 package main
 
 import (
-	// "fmt"
 	"bufio"
-	"github.com/collins994/gogle/code/index"
-	"github.com/collins994/gogle/code/parser"
-	"github.com/collins994/gogle/code/text"
 	"io/fs"
 	"os"
 	"path/filepath"
 	"sort"
 	"strings"
 )
+
+func main2() {
+	var terms = strings.Split("hello    world", " ")
+	for count := 0; count < len(terms); count++{
+		println(terms[count])
+	}
+}
 
 func main() {
 	if len(os.Args) < 2 {
@@ -98,3 +101,14 @@ func main() {
 		print("> ")
 	}
 }
+
+
+/*
+	thoughts(collins):
+	Maybe the index methods should not do any Normalization or stemming 
+	maybe we should have a wrapper that converts the user's query into a searchable format (normalized, stemmed terms)
+	eg
+	Search(query string) 	
+		-> get the first term, use it to find the postings in the index, 
+		-> then get the second term, and use it on the already retrieved postings
+*/

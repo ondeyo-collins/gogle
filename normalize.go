@@ -1,8 +1,6 @@
-package text
+package gogle
 
 import (
-	// "io"
-	// 	"strings"
 	"unicode"
 	"unicode/utf8"
 )

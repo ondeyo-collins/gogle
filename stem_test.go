@@ -1,17 +1,6 @@
-package text
+package gogle
 
 import "testing"
-
-func TestNormalize(t *testing.T) {
-	// var input = []rune("hellÒ    \t \n world")
-	var input=[]rune("defined(__GNUC__)")
-	var expectedOutput = "hello world"
-	Normalize(&input)
-
-	if string(input) != expectedOutput {
-		t.Fatalf("Expected: %v\nGOT: %v\n", expectedOutput, string(input))
-	}
-}
 
 func TestPorterStem(t *testing.T) {
 	var stem = func(input, expectedOutput string) {
@@ -22,8 +11,8 @@ func TestPorterStem(t *testing.T) {
 		}
 	}
 
-	// stem("as", "a")
-	// stem("op", "op")
+	stem("as", "a")
+	stem("op", "op")
 	stem("caresses", "caress")
 	stem("ponies", "poni")
 	stem("caress", "caress")
